@@ -93,6 +93,7 @@ void title_screen()
     vram_fill(0x00, 960);
     vram_fill(0x00, 64);
     ppu_on_all();
+    ppu_off();
 }
 
 // void title_screen()
