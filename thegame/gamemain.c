@@ -6,6 +6,7 @@
 #include "gameconfig.h"
 #include "player.h"
 #include "scrolling.h"
+#include "vrambuf.h"
 
 // function to write a string into the name table
 //   adr = start address in name table
