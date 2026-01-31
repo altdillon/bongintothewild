@@ -5,6 +5,7 @@
 #include "pallets.h"
 #include "gameconfig.h"
 #include "player.h"
+#include "scrolling.h"
 
 // function to write a string into the name table
 //   adr = start address in name table
@@ -24,6 +25,14 @@ void main(void)
   player.dy = 3;
   player.ctrlr = 0;
   player.playerSp = 0xB1;
+
+  // write text to name table
+  put_str(NTADR_A(2,0), "Nametable A, Line 0");
+  put_str(NTADR_A(2,15), "Nametable A, Line 15");
+  put_str(NTADR_A(2,29),"Nametable A, Line 29");
+  put_str(NTADR_C(2,0), "Nametable C, Line 0");
+  put_str(NTADR_C(2,15), "Nametable C, Line 15");
+  put_str(NTADR_C(2,29),"Nametable C, Line 29");
 
   setup_graphics();
   while(1)
