@@ -3,17 +3,30 @@
 #include "./../neslib/neslib.h"
 #include "pallets.h"
 #include "gameconfig.h"
+#include "controller.h"
+
+// struct to hold some basic information about the player
+typedef struct {
+  unsigned char px;
+  unsigned char py;
+} player_t;
 
 void setup_graphics();
-void draw_sprites();
 
 // main function, run after console reset
 void main(void)
 {
-  setup_graphics();
+  player_t player;
+  player.px = 120;
+  player.py = 120;
 
-  // infinite loop
-  while (1);
+  setup_graphics();
+  while(1)
+  {
+    oam_clear();
+    oam_spr(player.px, player.py, 0x04, 0,0);
+    ppu_wait_nmi();
+  }
 }
 
 void setup_graphics()
@@ -25,3 +38,4 @@ void setup_graphics()
   // turn on PPU
   ppu_on_all();
 }
+
