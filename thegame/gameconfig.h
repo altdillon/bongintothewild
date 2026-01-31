@@ -8,10 +8,6 @@
 // limits for the X axis
 #define LOWER_SCROLL_LIMIT_X 20
 #define UPPER_SCROLL_LIMIT_X 230
-// game states
-#define TITLESCREEN 0
-#define GAMETIME 1
-#define GAMEOVER 2
 
 // game related values
 #define DEFAULT_HEALTH 99
