@@ -1,3 +1,3 @@
-NAME = hello_world
+NAME = bongintothewild
 
 include ../common.mk
