@@ -59,6 +59,7 @@ void show_title_screen(const byte* pal, const byte* rle)
   ppu_on_all();
 }
 
+
 void title_screen()
 {
     char i, start_btn = 0, pad;
@@ -104,6 +105,10 @@ void play_state()
   player.dy = 3;
   player.ctrlr = 0;
   player.playerSp = 0xB1;
+
+  // game play veriables
+  player.health = DEFAULT_HEALTH; 
+  player.immunity = DEFAULT_IMMUNITY;
 
   // init the scroller
   scroller.sx = 0;

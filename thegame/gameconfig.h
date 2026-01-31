@@ -13,6 +13,10 @@
 #define GAMETIME 1
 #define GAMEOVER 2
 
+// game related values
+#define DEFAULT_HEALTH 99
+#define DEFAULT_IMMUNITY 20
+
 typedef unsigned char gamestate_t;
 
 #endif

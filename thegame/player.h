@@ -12,6 +12,9 @@ typedef struct {
   unsigned char dy;
   // player sprite
   unsigned char playerSp;
+  // game variables
+  unsigned char health; // how much heath the player has, typically 100
+  unsigned char immunity; // how much the player can resist taking damage
 } player_t;
 
 
