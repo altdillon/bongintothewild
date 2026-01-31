@@ -14,7 +14,7 @@ void main(void)
   player_t player;
   player.px = 120;
   player.py = 120;
-  player.dx = 3;
+  player.dx = 1;
   player.dy = 3;
   player.ctrlr = 0;
   player.playerSp = 4;
