@@ -1,5 +1,6 @@
 
 // include NESLIB header
+#include <stdio.h>
 #include <string.h>
 #include "./../neslib/neslib.h"
 #include "pallets.h"
@@ -89,11 +90,13 @@ void title_screen()
 */
 void play_state()
 {
+  char strbuffer[32];
   char running;
   player_t player; // player object
   scroll_t scroller;
   //Window_t window; // location of the window
 
+  memset(strbuffer,'\0',32);
   running = 1;
   // init the player
   player.px = 120;
@@ -108,20 +111,25 @@ void play_state()
   scroller.sy = 0;
 
   // write text to name table
-  put_str(NTADR_A(2,0), "Nametable A, Line 0");
-  put_str(NTADR_A(2,15), "Nametable A, Line 15");
-  put_str(NTADR_A(2,29),"Nametable A, Line 29");
-  put_str(NTADR_C(2,0), "Nametable C, Line 0");
-  put_str(NTADR_C(2,15), "Nametable C, Line 15");
-  put_str(NTADR_C(2,29),"Nametable C, Line 29");
+  // put_str(NTADR_A(2,0), "Nametable A, Line 0");
+  // put_str(NTADR_A(2,15), "Nametable A, Line 15");
+  // put_str(NTADR_A(2,29),"Nametable A, Line 29");
+  // put_str(NTADR_C(2,0), "Nametable C, Line 0");
+  // put_str(NTADR_C(2,15), "Nametable C, Line 15");
+  // put_str(NTADR_C(2,29),"Nametable C, Line 29");
 
   setup_graphics();
   while(running)
   {
-    oam_clear();
+    oam_clear(); // clear off all the old sprites
+    updbuf[0] = NT_UPD_EOF;
+    // draw the player, and then use the vram buffer to draw any other enviroment related stuff onto the screen 
     oam_spr(player.px, player.py, player.playerSp, 0,0);
-    ppu_wait_nmi();
-
+    // test stuff...  
+    sprintf(strbuffer,"Nametable A, Line 0");
+    vrambuf_put(NTADR_A(2,0),strbuffer,strlen(strbuffer));
+    //ppu_wait_nmi();
+    // end of test stuff... 
     // update player from the controller
     move_player(&player);
     // figure out if we have to scroll
@@ -129,6 +137,8 @@ void play_state()
     //map_scroll(scroll_t *scroll, player_t *player, char ncontroller)
     map_scroll(&scroller,&player,0);
     scroll(scroller.sx,scroller.sy);
+
+    ppu_wait_nmi();
   }
 }
 
@@ -138,6 +148,10 @@ void setup_graphics()
   oam_clear();
   // set palette colors
   pal_all(PALETTE);
+  // clear the VRAM buffer
+  vrambuf_clear();
+  // set the NMI handler
+  set_vram_update(updbuf);
   // turn on PPU
   ppu_on_all();
 }
