@@ -1,14 +1,14 @@
 #include "scrolling.h"
 #include "./../neslib/neslib.h"
 
-typedef struct 
-{
-    // x and y values for the location of the window
-    unsigned char windowX;
-    unsigned char windowY;
-}Window_t;
 
-void map_scroll(unsigned char mx, unsigned char my)
-{
+// void map_scroll(unsigned char mx, unsigned char my)
+// {
+    
+// }
 
+void map_scroll(scroll_t *scroll,player_t *player,char ncontroller)
+{
+    unsigned char pad;
+    pad = pad_poll(ncontroller);
 }

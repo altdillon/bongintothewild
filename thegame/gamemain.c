@@ -15,16 +15,25 @@ void put_str(unsigned int adr, const char *str);
 void setup_graphics();
 void move_player(player_t *player);
 
+
+
 // main function, run after console reset
 void main(void)
 {
-  player_t player;
+  player_t player; // player object
+  //Window_t window; // location of the window
+
+  // init the player
   player.px = 120;
   player.py = 120;
   player.dx = 3;
   player.dy = 3;
   player.ctrlr = 0;
   player.playerSp = 0xB1;
+
+  // init the window
+  //window.windowX = 0;
+  //window.windowY = 0;
 
   // write text to name table
   put_str(NTADR_A(2,0), "Nametable A, Line 0");

@@ -1,12 +1,13 @@
 #ifndef SCROLLING_H
 #define SCROLLING_H
+#include "player.h"
 typedef struct 
 {
     // x and y values for the location of the window
-    unsigned char windowX;
-    unsigned char windowY;
-}Window_t;
+    unsigned char sx;
+    unsigned char sy;
+}scroll_t;
 
-void map_scroll(unsigned char mx, unsigned char my);
+void map_scroll(scroll_t *scroll,player_t *player,char ncontroller);
 
 #endif
