@@ -17,6 +17,10 @@ void setup_graphics();
 void move_player(player_t *player);
 void play_state();
 void title_screen();
+void show_title_screen(const byte* pal, const byte* rle);
+
+extern const byte game_title_pal[16];
+extern const byte game_title_rle[];
 
 // main function, run after console reset
 void main(void)
@@ -44,9 +48,50 @@ void main(void)
   }
 }
 
+void show_title_screen(const byte* pal, const byte* rle)
+{
+  ppu_off();
+
+  pal_bg(pal);
+  pal_bright(0);
+  vram_adr(0x2000);
+  //vram_unrle(rle);
+  ppu_on_all();
+}
+
 void title_screen()
 {
-
+  //show_title_screen(game_title_pal,game_title_pal);
+  /*
+    quick and dirty title screen 
+  */
+  char i;
+  char start_btn;
+  char pad;
+  pal_col(0,0x03);	// set screen to dark blue
+  pal_col(1,0x14);	// fuchsia
+  pal_col(2,0x20);	// grey
+  pal_col(3,0x2d);
+  put_str(NTADR_A(2,6), "PRESS START!");
+  ppu_on_all();
+  start_btn = 0;
+  while(start_btn != 1)
+  {
+    for(i=0;i<2;i++)
+    {
+      pad = pad_poll(i);
+      if(pad&PAD_START) // if the start button was indeed pressed
+      {
+        start_btn = 1;
+      }
+    }
+  }
+  ppu_off();
+  vram_adr(NAMETABLE_A);
+  vram_fill(0x00, 960);   // clear tiles
+  vram_fill(0x00, 64);    // clear attributes
+  ppu_on_all();
+  ppu_off();
 }
 
 /*
