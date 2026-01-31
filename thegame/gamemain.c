@@ -99,10 +99,12 @@ void title_screen()
 */
 void play_state()
 {
+  char running;
   player_t player; // player object
   scroll_t scroller;
   //Window_t window; // location of the window
 
+  running = 1;
   // init the player
   player.px = 120;
   player.py = 120;
@@ -124,7 +126,7 @@ void play_state()
   put_str(NTADR_C(2,29),"Nametable C, Line 29");
 
   setup_graphics();
-  while(1)
+  while(running)
   {
     oam_clear();
     oam_spr(player.px, player.py, player.playerSp, 0,0);
