@@ -23,7 +23,7 @@ void show_title_screen(const byte* pal, const byte* rle);
 
 // global values
 unsigned short frame_count; // counter for keeping a running count of the frames
-
+unsigned short seconds;
 
 // main function, run after console reset
 void main(void)
@@ -32,6 +32,7 @@ void main(void)
   // informal values for game state
   // NOTE: This may get turned into a struct in the future 
   frame_count = 0;
+  seconds = 0;
 
   gamestate = TITLESCREEN;
   // 
@@ -139,7 +140,7 @@ void play_state()
     oam_spr(player.px, player.py, player.playerSp, 0,0);
     // test stuff...  
     // test table A
-    sprintf(strbuffer,"Nametable A, Line 0");
+    sprintf(strbuffer,"Nametable A, Line 0 %d",seconds);
     vrambuf_put(NTADR_A(2,0),strbuffer,strlen(strbuffer));
     sprintf(strbuffer,"Nametable A, Line 15");
     vrambuf_put(NTADR_A(2,15),strbuffer,strlen(strbuffer));
@@ -163,6 +164,10 @@ void play_state()
     scroll(scroller.sx,scroller.sy);
 
     frame_count++;
+    if(frame_count % 60 == 0)
+    {
+      seconds++;
+    }
     ppu_wait_nmi();
   }
 }
