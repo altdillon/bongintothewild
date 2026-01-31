@@ -118,6 +118,7 @@ void play_state()
   // game play veriables
   player.health = DEFAULT_HEALTH; 
   player.immunity = DEFAULT_IMMUNITY;
+  player.dir = PLAYER_NORTH;
 
   // init the scroller
   scroller.sx = 0;
