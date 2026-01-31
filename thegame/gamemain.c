@@ -21,6 +21,8 @@ void play_state();
 void title_screen();
 void show_title_screen(const byte* pal, const byte* rle);
 
+// global values
+unsigned short frame_count; // counter for keeping a running count of the frames
 
 
 // main function, run after console reset
@@ -29,7 +31,7 @@ void main(void)
   gamestatus_t gamestate;
   // informal values for game state
   // NOTE: This may get turned into a struct in the future 
- 
+  frame_count = 0;
 
   gamestate = TITLESCREEN;
   // 
@@ -160,6 +162,7 @@ void play_state()
     map_scroll(&scroller,&player,0);
     scroll(scroller.sx,scroller.sy);
 
+    frame_count++;
     ppu_wait_nmi();
   }
 }
