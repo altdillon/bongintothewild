@@ -12,4 +12,7 @@
 #define TITLESCREEN 0
 #define GAMETIME 1
 #define GAMEOVER 2
+
+typedef unsigned char gamestate_t;
+
 #endif

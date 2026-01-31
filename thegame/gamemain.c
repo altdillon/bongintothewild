@@ -15,11 +15,32 @@ void put_str(unsigned int adr, const char *str);
 
 void setup_graphics();
 void move_player(player_t *player);
-
+void play_state();
 
 
 // main function, run after console reset
 void main(void)
+{
+  gamestate_t gamestate;
+  gamestate = GAMETIME;
+
+  switch (gamestate)
+  {
+  case GAMETIME:
+    play_state();
+    break;
+  
+  default:
+    break;
+  }
+  
+  play_state();
+}
+
+/*
+  function for the game play state
+*/
+void play_state()
 {
   player_t player; // player object
   scroll_t scroller;
@@ -61,7 +82,6 @@ void main(void)
     scroll(scroller.sx,scroller.sy);
   }
 }
-
 
 void setup_graphics()
 {
