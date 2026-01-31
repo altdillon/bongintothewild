@@ -83,43 +83,6 @@ void title_screen()
     ppu_off();
 }
 
-// void title_screen()
-// {
-//   //show_title_screen(game_title_pal,game_title_pal);
-//   /*
-//     quick and dirty title screen 
-//   */
-//   char i;
-//   char start_btn;
-//   char pad;
-//   pal_col(0,0x03);	// set screen to dark blue
-//   pal_col(1,0x14);	// fuchsia
-//   pal_col(2,0x20);	// grey
-//   pal_col(3,0x2d);
-//   put_str(NTADR_A(2,6), "PRESS START!");
-//   ppu_on_all();
-
-//   //show_title_screen(hello_palette,hello_rle);
-
-//   start_btn = 0;
-//   while(start_btn != 1)
-//   {
-//     for(i=0;i<2;i++)
-//     {
-//       pad = pad_poll(i);
-//       if(pad&PAD_START) // if the start button was indeed pressed
-//       {
-//         start_btn = 1;
-//       }
-//     }
-//   }
-//   ppu_off();
-//   vram_adr(NAMETABLE_A);
-//   vram_fill(0x00, 960);   // clear tiles
-//   vram_fill(0x00, 64);    // clear attributes
-//   ppu_on_all();
-//   ppu_off();
-// }
 
 /*
   function for the game play state
