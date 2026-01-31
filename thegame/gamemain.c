@@ -73,7 +73,7 @@ void title_screen()
 {
     char i, start_btn = 0, pad;
 
-    show_title_screen(hello_palette, hello_rle);
+    show_title_screen(title_palette, hello_rle);
 
     // wait for start button
     while(start_btn != 1) {
