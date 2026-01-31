@@ -16,25 +16,37 @@ void put_str(unsigned int adr, const char *str);
 void setup_graphics();
 void move_player(player_t *player);
 void play_state();
-
+void title_screen();
 
 // main function, run after console reset
 void main(void)
 {
   gamestate_t gamestate;
-  gamestate = GAMETIME;
+  gamestate = TITLESCREEN;
 
-  switch (gamestate)
+  while(1)
   {
-  case GAMETIME:
-    play_state();
-    break;
+    switch (gamestate)
+    {
+    case GAMETIME:
+      play_state();
+      break;
   
-  default:
-    break;
+    case TITLESCREEN:
+      title_screen();
+      gamestate = GAMETIME;
+      break;
+
+    default:
+      break;
+    }
+ 
   }
-  
-  play_state();
+}
+
+void title_screen()
+{
+
 }
 
 /*
