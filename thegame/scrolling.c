@@ -15,11 +15,11 @@ void map_scroll(scroll_t *scroll,player_t *player,char ncontroller)
 
     // determine if the player is moving
 
-  if(pad & PAD_UP && (player->py + player->dy) > LOWER_SCROLL_LIMIT_Y)
+  if(pad & PAD_UP && (player->py + player->dy) < LOWER_SCROLL_LIMIT_Y)
   {
     scroll->sy -= 1;
   }
-  if(pad & PAD_DOWN && (player->py - player->dy) <= UPPER_SCROLL_LIMIT_Y)
+  if(pad & PAD_DOWN && (player->py - player->dy) > UPPER_SCROLL_LIMIT_Y)
   {
     scroll->sy += 1;
   }
