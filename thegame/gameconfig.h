@@ -13,5 +13,12 @@
 #define DEFAULT_HEALTH 99
 #define DEFAULT_IMMUNITY 20
 
+// define the map bounderies.  
+// These are the absoulte bounderies of the world map
+#define WORLD_WIDTH 100
+#define WORLD_HEIGHT 100
+
+// variables for the pleage 
+#define CELLNACTORS 20
 
 #endif
