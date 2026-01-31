@@ -25,8 +25,13 @@ void show_title_screen(const byte* pal, const byte* rle);
 // main function, run after console reset
 void main(void)
 {
-  gamestate_t gamestate;
+  gamestatus_t gamestate;
+  // informal values for game state
+  // NOTE: This may get turned into a struct in the future 
+ 
+
   gamestate = TITLESCREEN;
+  // 
 
   while(1)
   {
