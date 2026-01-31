@@ -11,15 +11,15 @@ void move_player(player_t *player)
   {
     player->py -= player->dy;
   }
-  else if(pad & PAD_DOWN && (player->py - player->dy) <= UPPER_SCROLL_LIMIT_Y)
+  if(pad & PAD_DOWN && (player->py - player->dy) <= UPPER_SCROLL_LIMIT_Y)
   {
     player->py += player->dy;
   }
-  else if(pad & PAD_RIGHT && (player->px + player->dx) < UPPER_SCROLL_LIMIT_X)
+  if(pad & PAD_RIGHT && (player->px + player->dx) < UPPER_SCROLL_LIMIT_X)
   {
     player->px += player->dx;
   }
-  else if(pad & PAD_LEFT && (player->px - player->dx) > LOWER_SCROLL_LIMIT_X)
+  if(pad & PAD_LEFT && (player->px - player->dx) > LOWER_SCROLL_LIMIT_X)
   {
     player->px -= player->dx;
   }
