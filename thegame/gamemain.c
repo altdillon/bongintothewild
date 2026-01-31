@@ -9,6 +9,7 @@
 #include "scrolling.h"
 #include "vrambuf.h"
 #include "assets.h"
+#include "gamestate.h"
 
 // function to write a string into the name table
 //   adr = start address in name table

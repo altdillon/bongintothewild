@@ -17,6 +17,5 @@
 #define DEFAULT_HEALTH 99
 #define DEFAULT_IMMUNITY 20
 
-typedef unsigned char gamestatus_t;
 
 #endif
