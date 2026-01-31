@@ -23,11 +23,11 @@ void map_scroll(scroll_t *scroll,player_t *player,char ncontroller)
   {
     scroll->sy += 1;
   }
-  if(pad & PAD_RIGHT && (player->px + player->dx) < UPPER_SCROLL_LIMIT_X)
+  if(pad & PAD_RIGHT && (player->px + player->dx) > UPPER_SCROLL_LIMIT_X)
   {
     scroll->sx += 1;
   }
-  if(pad & PAD_LEFT && (player->px - player->dx) > LOWER_SCROLL_LIMIT_X)
+  if(pad & PAD_LEFT && (player->px - player->dx) < LOWER_SCROLL_LIMIT_X)
   {
     scroll->sx -= 1;
   }
