@@ -12,7 +12,7 @@
 #include "assets.h"
 #include "gamestate.h"
 #include "plague.h"
-//#include "rndhelper.h"
+#include "rndhelper.h"
 #include "maskitem.h"
 
 //include nametables for all the screens such as title or game over
@@ -28,7 +28,7 @@ void title_screen();
 void show_title_screen(const byte* pal, const byte* rle);
 void display_static_background(const byte* pal, const byte* rle,const byte* attr_table ,unsigned int adr);
 
-unsigned char rndint(unsigned char a,unsigned char b);
+//unsigned char rndint(unsigned char a,unsigned char b);
 
 // global values
 unsigned short frame_count; // counter for keeping a running count of the frames
@@ -290,7 +290,7 @@ void put_str(unsigned int adr, const char *str)
   vram_write(str, strlen(str)); // write bytes to PPU
 }
 
-unsigned char rndint(unsigned char a,unsigned char b)
-{
-  return (rand() % (b-a)) + a;
-}
+// unsigned char rndint(unsigned char a,unsigned char b)
+// {
+//   return (rand() % (b-a)) + a;
+// }
