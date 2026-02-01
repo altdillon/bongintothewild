@@ -21,4 +21,7 @@
 // variables for the pleage 
 #define CELLNACTORS 20
 
+// define how many seconds a Day is
+#define DAY_LENGTH 90
+
 #endif

@@ -115,11 +115,13 @@ void title_screen()
 */
 void play_state()
 {
+  unsigned short day_count;
   char strbuffer[32];
   char running;
   player_t player; // player object
   scroll_t scroller;
   //Window_t window; // location of the window
+  day_count = 1; // start at one b/c this is day 1
 
   memset(strbuffer,'\0',32);
   running = 1;
@@ -161,7 +163,9 @@ void play_state()
     updbuf[0] = NT_UPD_EOF;
     // draw the player, and then use the vram buffer to draw any other enviroment related stuff onto the screen 
     oam_spr(player.px, player.py, player.playerSp, 0,0);
-   
+  
+     
+      
     // update player from the controller
     move_player(&player);
     // figure out if we have to scroll
@@ -174,7 +178,11 @@ void play_state()
     if(frame_count % 60 == 0)
     {
       seconds++;
-    }
+      if(seconds % DAY_LENGTH == 0) // is daycount a multiple of 90?
+      {
+        day_count++;
+      }
+    } 
     ppu_wait_nmi();
   }
 }
