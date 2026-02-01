@@ -30,8 +30,10 @@ void display_static_background(const byte* pal, const byte* rle,const byte* attr
 // global values
 unsigned short frame_count; // counter for keeping a running count of the frames
 unsigned short seconds;
-char circle_x[12]={20,16,10,0,-10,-16,-20,-16,-10,0,10,16};
-char circle_y[12]={0,10,16,20,16,10,0,-10,-16,-20,-16,-10};
+
+// pre computed values for where viruses go
+unsigned char circle_x[12]={20,16,10,0,-10,-16,-20,-16,-10,0,10,16};
+unsigned char circle_y[12]={0,10,16,20,16,10,0,-10,-16,-20,-16,-10};
 
 
 
