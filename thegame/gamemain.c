@@ -152,13 +152,14 @@ void play_state()
   display_static_background(background_palette, nesstBackground,backGroundAttertable, NAMETABLE_A);
   display_static_background(background_palette, nesstBackground,backGroundAttertable, NAMETABLE_C);
 
+  pal_spr(spr_palette);
+    
   setup_graphics();
   while(running)
   {
     oam_clear(); // clear off all the old sprites
     updbuf[0] = NT_UPD_EOF;
     // draw the player, and then use the vram buffer to draw any other enviroment related stuff onto the screen 
-    pal_bg(player_pal);
     oam_spr(player.px, player.py, player.playerSp, 0,0);
     // test stuff...  
     // test table A
