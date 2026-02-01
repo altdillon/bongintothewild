@@ -131,6 +131,7 @@ void play_state()
   char strbuffer[32];
   char running;
   char virus_x, virus_y;
+  mask_t mask_array[MAX_MASKS];
   player_t player; // player object
   scroll_t scroller;
   //Window_t window; // location of the window
@@ -205,7 +206,7 @@ void play_state()
       // take a random number to compute how many maks to draw.
       // do like double luck lol
       num_masks = rndint(0,MAX_MASKS);
-
+      compute_masks(mask_array,num_masks);
     }
 
     // check if the player is unluky every 3 seconds
