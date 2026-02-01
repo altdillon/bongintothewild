@@ -10,8 +10,6 @@ typedef struct
     unsigned char y;
 } mask_t;
 
-// array for holding masks
-extern mask_t mask_array[MAX_MASKS];
 
 // function prototypes
 void compute_masks(mask_t *array,unsigned char nmasks);

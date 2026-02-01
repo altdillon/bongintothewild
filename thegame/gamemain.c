@@ -13,6 +13,7 @@
 #include "gamestate.h"
 #include "plague.h"
 #include "rndhelper.h"
+#include "maskitem.h"
 
 //include nametables for all the screens such as title or game over
 
@@ -129,8 +130,8 @@ void play_state()
   unsigned char num_masks; // how many masks to draw on the screen if we're going to do that
   char strbuffer[32];
   char running;
-  player_t player; // player object
   char virus_x, virus_y;
+  player_t player; // player object
   scroll_t scroller;
   //Window_t window; // location of the window
   day_count = 1; // start at one b/c this is day 1
@@ -204,6 +205,7 @@ void play_state()
       // take a random number to compute how many maks to draw.
       // do like double luck lol
       num_masks = rndint(0,MAX_MASKS);
+
     }
 
     // check if the player is unluky every 3 seconds
