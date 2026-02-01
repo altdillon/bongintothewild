@@ -10,19 +10,7 @@
 /*
     Store information about the plague in question
 */
-unsigned char conway_grid[100]=
-{
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0x55, 0xAA, 0, 0, 0, 0, 0, 0,
-    0, 0, 0xAA, 0x55, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-};
+extern unsigned char conway_grid[100];
 
 void compute_generation();
 

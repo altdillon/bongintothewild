@@ -10,7 +10,7 @@
 #include "vrambuf.h"
 #include "assets.h"
 #include "gamestate.h"
-
+#include "plague.h"
 
 //include nametables for all the screens such as title or game over
 
