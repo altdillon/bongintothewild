@@ -82,7 +82,7 @@ void display_static_background(const byte* pal, const byte* rle,const byte* attr
   pal_bg(pal);
   vram_adr(adr);
   vram_unrle(rle);
-  vram_write(attr_table,sizeof(attr_table));
+  vram_write(attr_table,64);
 }
 
 
@@ -152,7 +152,7 @@ void play_state()
   // put_str(NTADR_C(2,15), "Nametable C, Line 15");
   // put_str(NTADR_C(2,29),"Nametable C, Line 29");
 
-  display_static_background(title_palette, nesstBackground,backGroundAttertable, NAMETABLE_A);
+  display_static_background(background_palette, nesstBackground,backGroundAttertable, NAMETABLE_A);
 
   setup_graphics();
   while(running)
