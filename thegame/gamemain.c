@@ -26,7 +26,7 @@ void move_player(player_t *player);
 void play_state();
 void title_screen();
 void show_title_screen(const byte* pal, const byte* rle);
-void display_static_background(const byte* pal, const byte* rle, unsigned int adr);
+void display_static_background(const byte* pal, const byte* rle,const byte* attr_table ,unsigned int adr);
 
 // global values
 unsigned short frame_count; // counter for keeping a running count of the frames
@@ -73,15 +73,16 @@ void show_title_screen(const byte* pal, const byte* rle)
   pal_bright(4);
   vram_adr(0x2000);
   vram_unrle(rle);
-  vram_write(title_attribute_table,sizeof(title_attribute_table));
+  vram_write(title_attribute_table,sizeof(title_attribute_table)); // this maybe shouldn't be hard coded, but who cares.
   ppu_on_all();
 }
 
-void display_static_background(const byte* pal, const byte* rle, unsigned int adr)
+void display_static_background(const byte* pal, const byte* rle,const byte* attr_table ,unsigned int adr)
 {
   pal_bg(pal);
   vram_adr(adr);
   vram_unrle(rle);
+  vram_write(attr_table,sizeof(attr_table));
 }
 
 
@@ -151,7 +152,7 @@ void play_state()
   // put_str(NTADR_C(2,15), "Nametable C, Line 15");
   // put_str(NTADR_C(2,29),"Nametable C, Line 29");
 
-  display_static_background(background_palette, nesstBackground, NAMETABLE_A);
+  display_static_background(title_palette, nesstBackground,backGroundAttertable, NAMETABLE_A);
 
   setup_graphics();
   while(running)
