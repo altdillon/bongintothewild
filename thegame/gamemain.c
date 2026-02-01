@@ -228,7 +228,7 @@ void play_state()
    
 
       lucky_number = rndint(1,10);
-      if(lucky_number > 6 && virus.alive == 0)
+      if(lucky_number >= 6 && virus.alive == 0)
       {
         // player is un lucky and must face punishment for a randum nucker picked by a 40 year old gaming console 
         // punish them!
