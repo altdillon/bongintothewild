@@ -1,0 +1,24 @@
+//define virus
+//define neighbor
+
+//define areas surrounding virus
+//define iteration of time
+
+// check the areas around the virus 8 ways
+//if the virus has a neighbor, neighbor variable ++
+
+//when the checking around the virus is done
+
+//if neighbor < 2
+//then virus dies
+
+//if neighbor >= 2
+//then virus lives
+
+//if neighbor > 3
+//then virus dies
+
+//if neighbor == 3
+//then virus spawns alive
+
+//iterate
