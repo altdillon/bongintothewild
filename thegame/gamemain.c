@@ -132,6 +132,9 @@ void play_state()
   player.dy = 3;
   player.ctrlr = 0;
   player.playerSp = 0xB1;
+  // init the player position in the map
+  player.map_posx = 200;
+  player.map_posy = 200;
 
   // game play veriables
   player.health = DEFAULT_HEALTH; 
@@ -164,7 +167,7 @@ void play_state()
     // draw the player, and then use the vram buffer to draw any other enviroment related stuff onto the screen 
     oam_spr(player.px, player.py, player.playerSp, 0,0);
   
-     
+
       
     // update player from the controller
     move_player(&player);

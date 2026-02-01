@@ -16,6 +16,9 @@ typedef struct {
   // delta vector for the player, so how fast the player moves on the spring
   unsigned char dx;
   unsigned char dy;
+  // position vector for the player on the map.
+  unsigned short map_posx;
+  unsigned short map_posy;
   // player sprite, sprite index for the pattern table
   unsigned char playerSp;
   // game variables
