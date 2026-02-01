@@ -5,7 +5,7 @@
 #include "gameconfig.h"
 #define GRIDWIDTH 40
 #define GRIDHEIGHT 20
-
+#define PLAGUE_SPRITE_INDEX 0xB9
 
 /*
     Store information about the plague in question
@@ -26,13 +26,6 @@ unsigned char conway_grid[100]=
 
 void compute_generation();
 
-typedef struct 
-{
-    unsigned short px;
-    unsigned short py;
-    unsigned char sprite_index;
-    unsigned char cell_state;
-}virus_t;
 
 
 #endif
