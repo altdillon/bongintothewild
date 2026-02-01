@@ -73,6 +73,7 @@ void show_title_screen(const byte* pal, const byte* rle)
   pal_bright(4);
   vram_adr(0x2000);
   vram_unrle(rle);
+  vram_write(title_attribute_table,sizeof(title_attribute_table));
   ppu_on_all();
 }
 
@@ -198,7 +199,7 @@ void setup_graphics()
   // clear the sprites and turn on the ppu
   oam_clear();
   // set palette colors
-  pal_all(PALETTE);
+  //pal_all(PALETTE);
   // clear the VRAM buffer
   vrambuf_clear();
   // set the NMI handler
