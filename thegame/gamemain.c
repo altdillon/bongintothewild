@@ -11,6 +11,12 @@
 #include "assets.h"
 #include "gamestate.h"
 
+
+//include nametables for all the screens such as title or game over
+
+//#include "game_nam.h"
+
+
 // function to write a string into the name table
 //   adr = start address in name table
 //   str = pointer to string
@@ -20,6 +26,7 @@ void move_player(player_t *player);
 void play_state();
 void title_screen();
 void show_title_screen(const byte* pal, const byte* rle);
+void display_static_background(const byte* pal, const byte* rle, unsigned int adr);
 
 // global values
 unsigned short frame_count; // counter for keeping a running count of the frames
@@ -42,6 +49,7 @@ void main(void)
     switch (gamestate)
     {
     case GAMETIME:
+      
       play_state();
       break;
   
@@ -67,6 +75,16 @@ void show_title_screen(const byte* pal, const byte* rle)
   vram_unrle(rle);
   ppu_on_all();
 }
+
+void display_static_background(const byte* pal, const byte* rle, unsigned int adr)
+{
+  pal_bg(pal);
+  vram_adr(adr);
+  vram_unrle(rle);
+}
+
+
+
 
 
 void title_screen()
@@ -131,6 +149,8 @@ void play_state()
   // put_str(NTADR_C(2,0), "Nametable C, Line 0");
   // put_str(NTADR_C(2,15), "Nametable C, Line 15");
   // put_str(NTADR_C(2,29),"Nametable C, Line 29");
+
+  display_static_background(background_palette, nesstBackground, NAMETABLE_A);
 
   setup_graphics();
   while(running)
