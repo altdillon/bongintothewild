@@ -153,6 +153,7 @@ void play_state()
   // put_str(NTADR_C(2,29),"Nametable C, Line 29");
 
   display_static_background(background_palette, nesstBackground,backGroundAttertable, NAMETABLE_A);
+  display_static_background(background_palette, nesstBackground,backGroundAttertable, NAMETABLE_C);
 
   setup_graphics();
   while(running)
