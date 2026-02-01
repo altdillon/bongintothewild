@@ -7,7 +7,7 @@ void compute_generation(){
     unsigned char tl, t, tr, ml, mr, bl, b, br, m;
     unsigned char pos = 0;
     unsigned char nei;
-
+    unsigned char *source, *target;
 
 
 
@@ -104,7 +104,6 @@ unsigned char future_grid[100]=
         
     }
     
-    unsigned char *source, *target;
     source = future_grid;
     target = conway_grid;
     pos = (GRIDWIDTH * GRIDHEIGHT)/8;
