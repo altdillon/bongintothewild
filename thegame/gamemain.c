@@ -2,6 +2,7 @@
 // include NESLIB header
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "./../neslib/neslib.h"
 #include "pallets.h"
 #include "gameconfig.h"
@@ -17,9 +18,6 @@
 //#include "game_nam.h"
 
 
-// function to write a string into the name table
-//   adr = start address in name table
-//   str = pointer to string
 void put_str(unsigned int adr, const char *str);
 void setup_graphics();
 void move_player(player_t *player);
@@ -27,6 +25,7 @@ void play_state();
 void title_screen();
 void show_title_screen(const byte* pal, const byte* rle);
 void display_static_background(const byte* pal, const byte* rle,const byte* attr_table ,unsigned int adr);
+unsigned char rndint(unsigned char a,unsigned char b);
 
 // global values
 unsigned short frame_count; // counter for keeping a running count of the frames
@@ -209,4 +208,10 @@ void put_str(unsigned int adr, const char *str)
 {
   vram_adr(adr);        // set PPU read/write address
   vram_write(str, strlen(str)); // write bytes to PPU
+}
+
+// helper for 32 bit srand numbers
+unsigned char rndint(unsigned char a,unsigned char b)
+{
+  return (rand() % (b-a)) + a;
 }
