@@ -1,0 +1,1042 @@
+Modules list:
+-------------
+gamemain.o:
+    CODE              Offs=000000  Size=00042F  Align=00001  Fill=0000
+    RODATA            Offs=000000  Size=000365  Align=00001  Fill=0000
+    BSS               Offs=000000  Size=000004  Align=00001  Fill=0000
+    DATA              Offs=000000  Size=000018  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+gamemap.o:
+    CODE              Offs=00042F  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=000365  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000018  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+plague.o:
+    CODE              Offs=00042F  Size=000400  Align=00001  Fill=0000
+    RODATA            Offs=000365  Size=000064  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000018  Size=000064  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+player.o:
+    CODE              Offs=00082F  Size=0002AA  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007C  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+scrolling.o:
+    CODE              Offs=000AD9  Size=000187  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007C  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+vrambuf.o:
+    CODE              Offs=000C60  Size=00009D  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007C  Size=000001  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+chr_generic.o:
+    CODE              Offs=000CFD  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+    CHARS             Offs=000000  Size=001000  Align=00001  Fill=0000
+game_title.o:
+    CODE              Offs=000CFD  Size=001010  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+header.o:
+    CODE              Offs=001D0D  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+    INESHDR           Offs=000000  Size=000007  Align=00001  Fill=0000
+crt0.o:
+    CODE              Offs=001D0D  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000022  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+    STARTUP           Offs=000000  Size=000513  Align=00001  Fill=0000
+    CHARS             Offs=001000  Size=000000  Align=00001  Fill=0000
+    SAMPLES           Offs=000000  Size=000000  Align=00001  Fill=0000
+    VECTORS           Offs=000000  Size=000006  Align=00001  Fill=0000
+lz4vram.o:
+    CODE              Offs=001D0D  Size=00017C  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000022  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+memfill.o:
+    CODE              Offs=001E89  Size=00002F  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000022  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+oam_clear_fast.o:
+    CODE              Offs=001EB8  Size=0000C3  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000022  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+oam_meta_spr.o:
+    CODE              Offs=001F7B  Size=00004A  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000022  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+oam_meta_spr_clip.o:
+    CODE              Offs=001FC5  Size=000058  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000022  Size=000002  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+oam_meta_spr_pal.o:
+    CODE              Offs=00201D  Size=000050  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000024  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+oam_spr.o:
+    CODE              Offs=00206D  Size=00002C  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000024  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+pad.o:
+    CODE              Offs=002099  Size=000051  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000024  Size=000006  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+rand.o:
+    CODE              Offs=0020EA  Size=000032  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002A  Size=000002  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+split.o:
+    CODE              Offs=00211C  Size=00002C  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+splitxy.o:
+    CODE              Offs=002148  Size=00005F  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+vram_read.o:
+    CODE              Offs=0021A7  Size=00002A  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+vram_unrle.o:
+    CODE              Offs=0021D1  Size=000037  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(add.o):
+    CODE              Offs=002208  Size=00001C  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(addysp.o):
+    CODE              Offs=002224  Size=00000E  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(condes.o):
+    CODE              Offs=002232  Size=00000C  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00007D  Size=000025  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+    ONCE              Offs=000000  Size=00000C  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(copydata.o):
+    CODE              Offs=00223E  Size=00002D  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(decsp1.o):
+    CODE              Offs=00226B  Size=000009  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(decsp2.o):
+    CODE              Offs=002274  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(decsp4.o):
+    CODE              Offs=002281  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(decsp6.o):
+    CODE              Offs=00228E  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(icmp.o):
+    CODE              Offs=00229B  Size=00002E  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(incsp2.o):
+    CODE              Offs=0022C9  Size=000016  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(incsp3.o):
+    CODE              Offs=0022DF  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(incsp4.o):
+    CODE              Offs=0022E4  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(incsp5.o):
+    CODE              Offs=0022E9  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(incsp6.o):
+    CODE              Offs=0022EE  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(incsp8.o):
+    CODE              Offs=0022F3  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(memcpy.o):
+    CODE              Offs=0022F8  Size=00003C  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(popa.o):
+    CODE              Offs=002334  Size=00000C  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(popptr1.o):
+    CODE              Offs=002340  Size=00000E  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(pusha.o):
+    CODE              Offs=00234E  Size=000016  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(pushax.o):
+    CODE              Offs=002364  Size=00001A  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(pushwsp.o):
+    CODE              Offs=00237E  Size=00001C  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(rand.o):
+    CODE              Offs=00239A  Size=000031  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A2  Size=000004  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(regswap2.o):
+    CODE              Offs=0023CB  Size=000016  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A6  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(staspidx.o):
+    CODE              Offs=0023E1  Size=000016  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A6  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(staxsp.o):
+    CODE              Offs=0023F7  Size=00000B  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A6  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(staxspi.o):
+    CODE              Offs=002402  Size=00001B  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A6  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(strlen.o):
+    CODE              Offs=00241D  Size=000016  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A6  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(sub.o):
+    CODE              Offs=002433  Size=000015  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A6  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(subysp.o):
+    CODE              Offs=002448  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A6  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(udiv.o):
+    CODE              Offs=002455  Size=00004F  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A6  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(umod.o):
+    CODE              Offs=0024A4  Size=000011  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A6  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(zerobss.o):
+    CODE              Offs=0024B5  Size=000023  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A6  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/share/cc65/lib/nes.lib(zeropage.o):
+    CODE              Offs=0024D8  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=0003C9  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000004  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=0000A6  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=00002C  Size=00001A  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+CHARS                 000000  000FFF  001000  00001
+INESHDR               000000  000006  000007  00001
+NULL                  000000  000000  000000  00001
+ZEROPAGE              000000  000045  000046  00001
+DATA                  000300  0003A5  0000A6  00001
+BSS                   0003A6  0003A9  000004  00001
+STARTUP               008000  008512  000513  00001
+INIT                  008513  008513  000000  00001
+ONCE                  008513  00851E  00000C  00001
+CODE                  00851F  00A9F6  0024D8  00001
+RODATA                00A9F7  00ADBF  0003C9  00001
+SAMPLES               00FFC0  00FFC0  000000  00001
+VECTORS               00FFFA  00FFFF  000006  00001
+
+
+Exports list by name:
+---------------------
+FRAME_CNT1                000001  LZ    FRAME_CNT2                000002  LZ    
+NAME_UPD_ADR              000004  LZ    NAME_UPD_ENABLE           000006  LZ    
+NMICallback               000014  LZ    NTSC_MODE                 000000  LZ    
+PAL_BG_PTR                000008  LZ    PAL_SPR_PTR               00000A  LZ    
+PAL_UPDATE                000007  LZ    PPU_CTRL_VAR              000010 RLZ    
+PPU_CTRL_VAR1             000011 RLZ    PPU_MASK_VAR              000012  LZ    
+RAND_SEED                 00002A  LZ    SCROLL_X                  00000C  LZ    
+SCROLL_X1                 00000E RLZ    SCROLL_Y                  00000D  LZ    
+SCROLL_Y1                 00000F RLZ    TEMP                      000017 RLZ    
+VRAM_UPDATE               000003  LZ    _PALETTE                  00A9F7  LA    
+__BSS_LOAD__              0003A6  LA    __BSS_RUN__               0003A6 RLA    
+__BSS_SIZE__              000004 REA    __CODE_LOAD__             00851F  LA    
+__CODE_RUN__              00851F  LA    __CODE_SIZE__             0024D8  EA    
+__CONSTRUCTOR_COUNT__     000000 REA    __CONSTRUCTOR_TABLE__     008513 RLA    
+__DATA_LOAD__             00ADC0 RLA    __DATA_RUN__              000300 RLA    
+__DATA_SIZE__             0000A6 REA    __DESTRUCTOR_COUNT__      000000 REA    
+__DESTRUCTOR_TABLE__      00ADC0 RLA    __INIT_LOAD__             008513  LA    
+__INIT_RUN__              008513  LA    __INIT_SIZE__             000000  EA    
+__ONCE_LOAD__             008513  LA    __ONCE_RUN__              008513  LA    
+__ONCE_SIZE__             00000C  EA    __RAM_FILEOFFS__          000000  EA    
+__RAM_LAST__              0003AA  LA    __RAM_SIZE__              000500 REA    
+__RAM_START__             000300 RLA    __RODATA_LOAD__           00A9F7  LA    
+__RODATA_RUN__            00A9F7  LA    __RODATA_SIZE__           0003C9  EA    
+__STARTUP_LOAD__          008000  LA    __STARTUP_RUN__           008000  LA    
+__STARTUP_SIZE__          000513  EA    __STARTUP__               000001 REA    
+__ZP_FILEOFFS__           000000  EA    __ZP_LAST__               000046  LA    
+__ZP_SIZE__               000100  EA    __ZP_START__              000000  LA    
+_backGroundAttertable     00AAE6  LA    _background_palette       00AA17  LA    
+_bank_bg                  00835D  LA    _bank_spr                 00834D  LA    
+_circle_x                 000300  LA    _circle_y                 00030C  LA    
+_compute_generation       00894E  LA    _conway_grid              000318  LA    
+_delay                    008439  LA    _display_static_background 0088CC  LA    
+_exit                     008008  LA    _flush_vram_update        00839E  LA    
+_frame_count              0003A6  LA    _game_title_pal           00921C  LA    
+_game_title_rle           00922C  LA    _get_ppu_ctrl_var         0082C5  LA    
+_hello_rle                00AB86  LA    _main                     008921 RLA    
+_map_scroll               008FF8 RLA    _memcpy                   00A817 RLA    
+_memfill                  00A3A8  LA    _move_player              008D4E RLA    
+_nesclock                 008434  LA    _nesstBackground          00AA27  LA    
+_nmi_set_callback         00822B  LA    _oam_clear                0082CD RLA    
+_oam_clear_fast           00A3D7  LA    _oam_hide_rest            0082ED  LA    
+_oam_meta_spr             00A49A  LA    _oam_meta_spr_clip        00A4E4  LA    
+_oam_meta_spr_pal         00A53C  LA    _oam_off                  000013 RLZ    
+_oam_size                 0082DB  LA    _oam_spr                  00A58C RLA    
+_pad_poll                 00A5B8 RLA    _pad_state                00A603  LA    
+_pad_trigger              00A5F8  LA    _pal_all                  008230  LA    
+_pal_bg                   00824A RLA    _pal_bg_bright            00828A  LA    
+_pal_bright               008298 RLA    _pal_clear                00826D  LA    
+_pal_col                  00825D  LA    _pal_spr                  008254 RLA    
+_pal_spr_bright           00827C  LA    _play_state               008551  LA    
+_player_pal               00AB76  LA    _ppu_mask                 0082BD  LA    
+_ppu_off                  00829F RLA    _ppu_on_all               0082A8 RLA    
+_ppu_on_bg                0082B1  LA    _ppu_on_spr               0082B7  LA    
+_ppu_system               0082C0  LA    _ppu_wait_frame           0082FA RLA    
+_ppu_wait_nmi             00830F RLA    _put_str                  00851F  LA    
+_rand                     00A8B9 RLA    _rand16                   00A62C  LA    
+_rand8                    00A621  LA    _rndint                   0088FF  LA    
+_scroll                   00831A RLA    _seconds                  0003A8  LA    
+_set_ppu_ctrl_var         0082CA  LA    _set_rand                 00A634  LA    
+_set_vram_update          008395 RLA    _setup_graphics           008541  LA    
+_show_title_screen        008890  LA    _split                    00A63B  LA    
+_splitxy                  00A667  LA    _spr_palette              00AD4C  LA    
+_srand                    00A8DB  LA    _strlen                   00A93C RLA    
+_title_attribute_table    00AB26  LA    _title_palette            00AB66  LA    
+_title_screen             00881A  LA    _updptr                   00037C  LA    
+_vram_adr                 0083F3 RLA    _vram_fill                0083FE RLA    
+_vram_inc                 008420  LA    _vram_put                 0083FA  LA    
+_vram_read                00A6C6  LA    _vram_unlz4               00A287  LA    
+_vram_unrle               00A6F0 RLA    _vram_write               00836E RLA    
+_vrambuf_clear            009188 RLA    _vrambuf_end              00917F  LA    
+_vrambuf_flush            009190  LA    _vrambuf_put              009199  LA    
+addysp                    00A744 RLA    addysp1                   00A743 RLA    
+condes                    00037D  LA    copydata                  00A75D RLA    
+decsp1                    00A78A RLA    decsp2                    00A793 RLA    
+decsp4                    00A7A0 RLA    decsp6                    00A7AD RLA    
+donelib                   00A751  LA    incsp2                    00A7F0 RLA    
+incsp3                    00A7FE RLA    incsp4                    00A803 RLA    
+incsp5                    00A808 RLA    incsp6                    00A80D RLA    
+incsp8                    00A812 RLA    initlib                   008513 RLA    
+memcpy_getparams          00A840  LA    memcpy_upwards            00A81A  LA    
+popa                      00A853 RLA    popax                     00A7E8 RLA    
+popptr1                   00A85F RLA    ptr1                      000034 RLZ    
+ptr2                      000036 RLZ    ptr3                      000038 RLZ    
+ptr4                      00003A RLZ    push0                     00A883 RLA    
+pusha                     00A871 RLA    pusha0                    00A885 RLA    
+pusha0sp                  00A86D  LA    pushax                    00A887 RLA    
+pushaysp                  00A86F  LA    pushw0sp                  00A89D RLA    
+pushwysp                  00A89F RLA    regbank                   000040 RLZ    
+regsave                   000030 RLZ    regswap2                  00A8EA RLA    
+sp                        00002C RLZ    sreg                      00002E RLZ    
+staspidx                  00A900 RLA    stax0sp                   00A916  LA    
+staxspidx                 00A921 RLA    staxysp                   00A918 RLA    
+subysp                    00A967 RLA    tmp1                      00003C RLZ    
+tmp2                      00003D RLZ    tmp3                      00003E RLZ    
+tmp4                      00003F RLZ    tosadda0                  00A727 RLA    
+tosaddax                  00A729  LA    tosicmp                   00A7BC  LA    
+tosicmp0                  00A7BA RLA    tossuba0                  00A952 RLA    
+tossubax                  00A954  LA    tosudiva0                 00A974  LA    
+tosudivax                 00A976  LA    tosumoda0                 00A9C3 RLA    
+tosumodax                 00A9C5  LA    udiv16                    00A985 RLA    
+zerobss                   00A9D4 RLA    
+
+
+Exports list by value:
+----------------------
+NTSC_MODE                 000000  LZ    __CONSTRUCTOR_COUNT__     000000 REA    
+__DESTRUCTOR_COUNT__      000000 REA    __INIT_SIZE__             000000  EA    
+__RAM_FILEOFFS__          000000  EA    __ZP_FILEOFFS__           000000  EA    
+__ZP_START__              000000  LA    FRAME_CNT1                000001  LZ    
+__STARTUP__               000001 REA    FRAME_CNT2                000002  LZ    
+VRAM_UPDATE               000003  LZ    NAME_UPD_ADR              000004  LZ    
+__BSS_SIZE__              000004 REA    NAME_UPD_ENABLE           000006  LZ    
+PAL_UPDATE                000007  LZ    PAL_BG_PTR                000008  LZ    
+PAL_SPR_PTR               00000A  LZ    SCROLL_X                  00000C  LZ    
+__ONCE_SIZE__             00000C  EA    SCROLL_Y                  00000D  LZ    
+SCROLL_X1                 00000E RLZ    SCROLL_Y1                 00000F RLZ    
+PPU_CTRL_VAR              000010 RLZ    PPU_CTRL_VAR1             000011 RLZ    
+PPU_MASK_VAR              000012  LZ    _oam_off                  000013 RLZ    
+NMICallback               000014  LZ    TEMP                      000017 RLZ    
+RAND_SEED                 00002A  LZ    sp                        00002C RLZ    
+sreg                      00002E RLZ    regsave                   000030 RLZ    
+ptr1                      000034 RLZ    ptr2                      000036 RLZ    
+ptr3                      000038 RLZ    ptr4                      00003A RLZ    
+tmp1                      00003C RLZ    tmp2                      00003D RLZ    
+tmp3                      00003E RLZ    tmp4                      00003F RLZ    
+regbank                   000040 RLZ    __ZP_LAST__               000046  LA    
+__DATA_SIZE__             0000A6 REA    __ZP_SIZE__               000100  EA    
+__DATA_RUN__              000300 RLA    __RAM_START__             000300 RLA    
+_circle_x                 000300  LA    _circle_y                 00030C  LA    
+_conway_grid              000318  LA    _updptr                   00037C  LA    
+condes                    00037D  LA    __BSS_LOAD__              0003A6  LA    
+__BSS_RUN__               0003A6 RLA    _frame_count              0003A6  LA    
+_seconds                  0003A8  LA    __RAM_LAST__              0003AA  LA    
+__RODATA_SIZE__           0003C9  EA    __RAM_SIZE__              000500 REA    
+__STARTUP_SIZE__          000513  EA    __CODE_SIZE__             0024D8  EA    
+__STARTUP_LOAD__          008000  LA    __STARTUP_RUN__           008000  LA    
+_exit                     008008  LA    _nmi_set_callback         00822B  LA    
+_pal_all                  008230  LA    _pal_bg                   00824A RLA    
+_pal_spr                  008254 RLA    _pal_col                  00825D  LA    
+_pal_clear                00826D  LA    _pal_spr_bright           00827C  LA    
+_pal_bg_bright            00828A  LA    _pal_bright               008298 RLA    
+_ppu_off                  00829F RLA    _ppu_on_all               0082A8 RLA    
+_ppu_on_bg                0082B1  LA    _ppu_on_spr               0082B7  LA    
+_ppu_mask                 0082BD  LA    _ppu_system               0082C0  LA    
+_get_ppu_ctrl_var         0082C5  LA    _set_ppu_ctrl_var         0082CA  LA    
+_oam_clear                0082CD RLA    _oam_size                 0082DB  LA    
+_oam_hide_rest            0082ED  LA    _ppu_wait_frame           0082FA RLA    
+_ppu_wait_nmi             00830F RLA    _scroll                   00831A RLA    
+_bank_spr                 00834D  LA    _bank_bg                  00835D  LA    
+_vram_write               00836E RLA    _set_vram_update          008395 RLA    
+_flush_vram_update        00839E  LA    _vram_adr                 0083F3 RLA    
+_vram_put                 0083FA  LA    _vram_fill                0083FE RLA    
+_vram_inc                 008420  LA    _nesclock                 008434  LA    
+_delay                    008439  LA    __CONSTRUCTOR_TABLE__     008513 RLA    
+__INIT_LOAD__             008513  LA    __INIT_RUN__              008513  LA    
+__ONCE_LOAD__             008513  LA    __ONCE_RUN__              008513  LA    
+initlib                   008513 RLA    __CODE_LOAD__             00851F  LA    
+__CODE_RUN__              00851F  LA    _put_str                  00851F  LA    
+_setup_graphics           008541  LA    _play_state               008551  LA    
+_title_screen             00881A  LA    _show_title_screen        008890  LA    
+_display_static_background 0088CC  LA    _rndint                   0088FF  LA    
+_main                     008921 RLA    _compute_generation       00894E  LA    
+_move_player              008D4E RLA    _map_scroll               008FF8 RLA    
+_vrambuf_end              00917F  LA    _vrambuf_clear            009188 RLA    
+_vrambuf_flush            009190  LA    _vrambuf_put              009199  LA    
+_game_title_pal           00921C  LA    _game_title_rle           00922C  LA    
+_vram_unlz4               00A287  LA    _memfill                  00A3A8  LA    
+_oam_clear_fast           00A3D7  LA    _oam_meta_spr             00A49A  LA    
+_oam_meta_spr_clip        00A4E4  LA    _oam_meta_spr_pal         00A53C  LA    
+_oam_spr                  00A58C RLA    _pad_poll                 00A5B8 RLA    
+_pad_trigger              00A5F8  LA    _pad_state                00A603  LA    
+_rand8                    00A621  LA    _rand16                   00A62C  LA    
+_set_rand                 00A634  LA    _split                    00A63B  LA    
+_splitxy                  00A667  LA    _vram_read                00A6C6  LA    
+_vram_unrle               00A6F0 RLA    tosadda0                  00A727 RLA    
+tosaddax                  00A729  LA    addysp1                   00A743 RLA    
+addysp                    00A744 RLA    donelib                   00A751  LA    
+copydata                  00A75D RLA    decsp1                    00A78A RLA    
+decsp2                    00A793 RLA    decsp4                    00A7A0 RLA    
+decsp6                    00A7AD RLA    tosicmp0                  00A7BA RLA    
+tosicmp                   00A7BC  LA    popax                     00A7E8 RLA    
+incsp2                    00A7F0 RLA    incsp3                    00A7FE RLA    
+incsp4                    00A803 RLA    incsp5                    00A808 RLA    
+incsp6                    00A80D RLA    incsp8                    00A812 RLA    
+_memcpy                   00A817 RLA    memcpy_upwards            00A81A  LA    
+memcpy_getparams          00A840  LA    popa                      00A853 RLA    
+popptr1                   00A85F RLA    pusha0sp                  00A86D  LA    
+pushaysp                  00A86F  LA    pusha                     00A871 RLA    
+push0                     00A883 RLA    pusha0                    00A885 RLA    
+pushax                    00A887 RLA    pushw0sp                  00A89D RLA    
+pushwysp                  00A89F RLA    _rand                     00A8B9 RLA    
+_srand                    00A8DB  LA    regswap2                  00A8EA RLA    
+staspidx                  00A900 RLA    stax0sp                   00A916  LA    
+staxysp                   00A918 RLA    staxspidx                 00A921 RLA    
+_strlen                   00A93C RLA    tossuba0                  00A952 RLA    
+tossubax                  00A954  LA    subysp                    00A967 RLA    
+tosudiva0                 00A974  LA    tosudivax                 00A976  LA    
+udiv16                    00A985 RLA    tosumoda0                 00A9C3 RLA    
+tosumodax                 00A9C5  LA    zerobss                   00A9D4 RLA    
+_PALETTE                  00A9F7  LA    __RODATA_LOAD__           00A9F7  LA    
+__RODATA_RUN__            00A9F7  LA    _background_palette       00AA17  LA    
+_nesstBackground          00AA27  LA    _backGroundAttertable     00AAE6  LA    
+_title_attribute_table    00AB26  LA    _title_palette            00AB66  LA    
+_player_pal               00AB76  LA    _hello_rle                00AB86  LA    
+_spr_palette              00AD4C  LA    __DATA_LOAD__             00ADC0 RLA    
+__DESTRUCTOR_TABLE__      00ADC0 RLA    
+
+
+Imports list:
+-------------
+FRAME_CNT1 (crt0.o):
+FRAME_CNT2 (crt0.o):
+NAME_UPD_ADR (crt0.o):
+NAME_UPD_ENABLE (crt0.o):
+NMICallback (crt0.o):
+NTSC_MODE (crt0.o):
+PAL_BG_PTR (crt0.o):
+PAL_SPR_PTR (crt0.o):
+PAL_UPDATE (crt0.o):
+PPU_CTRL_VAR (crt0.o):
+    split.o                   ../neslib/split.s(3)
+PPU_CTRL_VAR1 (crt0.o):
+    split.o                   ../neslib/split.s(3)
+PPU_MASK_VAR (crt0.o):
+RAND_SEED (rand.o):
+SCROLL_X (crt0.o):
+SCROLL_X1 (crt0.o):
+    splitxy.o                 ../neslib/splitxy.s(2)
+    split.o                   ../neslib/split.s(3)
+SCROLL_Y (crt0.o):
+SCROLL_Y1 (crt0.o):
+    splitxy.o                 ../neslib/splitxy.s(2)
+TEMP (crt0.o):
+    vram_unrle.o              ../neslib/vram_unrle.s(2)
+    vram_read.o               ../neslib/vram_read.s(2)
+    splitxy.o                 ../neslib/splitxy.s(2)
+    split.o                   ../neslib/split.s(3)
+    pad.o                     ../neslib/pad.s(8)
+    oam_spr.o                 ../neslib/oam_spr.s(2)
+    oam_meta_spr_pal.o        ../neslib/oam_meta_spr_pal.s(2)
+    oam_meta_spr_clip.o       ../neslib/oam_meta_spr_clip.s(2)
+    oam_meta_spr.o            ../neslib/oam_meta_spr.s(2)
+    memfill.o                 ../neslib/memfill.s(2)
+VRAM_UPDATE (crt0.o):
+_PALETTE (gamemain.o):
+__BSS_LOAD__ ([linker generated]):
+__BSS_RUN__ ([linker generated]):
+    zerobss.o                 common/zerobss.s(8)
+__BSS_SIZE__ ([linker generated]):
+    zerobss.o                 common/zerobss.s(8)
+__CODE_LOAD__ ([linker generated]):
+__CODE_RUN__ ([linker generated]):
+__CODE_SIZE__ ([linker generated]):
+__CONSTRUCTOR_COUNT__ ([linker generated]):
+    condes.o                  runtime/condes.s(18)
+__CONSTRUCTOR_TABLE__ ([linker generated]):
+    condes.o                  runtime/condes.s(18)
+__DATA_LOAD__ ([linker generated]):
+    copydata.o                common/copydata.s(8)
+__DATA_RUN__ ([linker generated]):
+    copydata.o                common/copydata.s(8)
+__DATA_SIZE__ ([linker generated]):
+    copydata.o                common/copydata.s(8)
+__DESTRUCTOR_COUNT__ ([linker generated]):
+    condes.o                  runtime/condes.s(19)
+__DESTRUCTOR_TABLE__ ([linker generated]):
+    condes.o                  runtime/condes.s(19)
+__INIT_LOAD__ ([linker generated]):
+__INIT_RUN__ ([linker generated]):
+__INIT_SIZE__ ([linker generated]):
+__ONCE_LOAD__ ([linker generated]):
+__ONCE_RUN__ ([linker generated]):
+__ONCE_SIZE__ ([linker generated]):
+__RAM_FILEOFFS__ ([linker generated]):
+__RAM_LAST__ ([linker generated]):
+__RAM_SIZE__ ([linker generated]):
+    crt0.o                    ../neslib/crt0.s(9)
+__RAM_START__ ([linker generated]):
+    crt0.o                    ../neslib/crt0.s(9)
+__RODATA_LOAD__ ([linker generated]):
+__RODATA_RUN__ ([linker generated]):
+__RODATA_SIZE__ ([linker generated]):
+__STARTUP_LOAD__ ([linker generated]):
+__STARTUP_RUN__ ([linker generated]):
+__STARTUP_SIZE__ ([linker generated]):
+__STARTUP__ (crt0.o):
+    gamemain.o                gamemain.s(13)
+__ZP_FILEOFFS__ ([linker generated]):
+__ZP_LAST__ ([linker generated]):
+__ZP_SIZE__ ([linker generated]):
+__ZP_START__ ([linker generated]):
+_backGroundAttertable (gamemain.o):
+_background_palette (gamemain.o):
+_bank_bg (crt0.o):
+_bank_spr (crt0.o):
+_circle_x (gamemain.o):
+_circle_y (gamemain.o):
+_compute_generation (plague.o):
+_conway_grid (plague.o):
+_delay (crt0.o):
+_display_static_background (gamemain.o):
+_exit (crt0.o):
+_flush_vram_update (crt0.o):
+_frame_count (gamemain.o):
+_game_title_pal (game_title.o):
+_game_title_rle (game_title.o):
+_get_ppu_ctrl_var (crt0.o):
+_hello_rle (gamemain.o):
+_main (gamemain.o):
+    crt0.o                    ../neslib/crt0.s(6)
+_map_scroll (scrolling.o):
+    gamemain.o                gamemain.s(34)
+_memcpy (memcpy.o):
+    vrambuf.o                 vrambuf.s(19)
+_memfill (memfill.o):
+_move_player (player.o):
+    gamemain.o                gamemain.s(33)
+_nesclock (crt0.o):
+_nesstBackground (gamemain.o):
+_nmi_set_callback (crt0.o):
+_oam_clear (crt0.o):
+    gamemain.o                gamemain.s(23)
+_oam_clear_fast (oam_clear_fast.o):
+_oam_hide_rest (crt0.o):
+_oam_meta_spr (oam_meta_spr.o):
+_oam_meta_spr_clip (oam_meta_spr_clip.o):
+_oam_meta_spr_pal (oam_meta_spr_pal.o):
+_oam_off (crt0.o):
+    oam_meta_spr_pal.o        ../neslib/oam_meta_spr_pal.s(2)
+    oam_meta_spr_clip.o       ../neslib/oam_meta_spr_clip.s(2)
+_oam_size (crt0.o):
+_oam_spr (oam_spr.o):
+    gamemain.o                gamemain.s(24)
+_pad_poll (pad.o):
+    scrolling.o               scrolling.s(14)
+    player.o                  player.s(14)
+    gamemain.o                gamemain.s(25)
+_pad_state (pad.o):
+_pad_trigger (pad.o):
+_pal_all (crt0.o):
+_pal_bg (crt0.o):
+    gamemain.o                gamemain.s(17)
+_pal_bg_bright (crt0.o):
+_pal_bright (crt0.o):
+    gamemain.o                gamemain.s(19)
+_pal_clear (crt0.o):
+_pal_col (crt0.o):
+_pal_spr (crt0.o):
+    gamemain.o                gamemain.s(18)
+_pal_spr_bright (crt0.o):
+_play_state (gamemain.o):
+_player_pal (gamemain.o):
+_ppu_mask (crt0.o):
+_ppu_off (crt0.o):
+    gamemain.o                gamemain.s(21)
+_ppu_on_all (crt0.o):
+    gamemain.o                gamemain.s(22)
+_ppu_on_bg (crt0.o):
+_ppu_on_spr (crt0.o):
+_ppu_system (crt0.o):
+_ppu_wait_frame (crt0.o):
+    vrambuf.o                 vrambuf.s(13)
+_ppu_wait_nmi (crt0.o):
+    gamemain.o                gamemain.s(20)
+_put_str (gamemain.o):
+_rand (rand.o):
+    gamemain.o                gamemain.s(16)
+_rand16 (rand.o):
+_rand8 (rand.o):
+_rndint (gamemain.o):
+_scroll (crt0.o):
+    gamemain.o                gamemain.s(26)
+_seconds (gamemain.o):
+_set_ppu_ctrl_var (crt0.o):
+_set_rand (rand.o):
+_set_vram_update (crt0.o):
+    gamemain.o                gamemain.s(27)
+_setup_graphics (gamemain.o):
+_show_title_screen (gamemain.o):
+_split (split.o):
+_splitxy (splitxy.o):
+_spr_palette (gamemain.o):
+_srand (rand.o):
+_strlen (strlen.o):
+    gamemain.o                gamemain.s(14)
+_title_attribute_table (gamemain.o):
+_title_palette (gamemain.o):
+_title_screen (gamemain.o):
+_updptr (vrambuf.o):
+_vram_adr (crt0.o):
+    gamemain.o                gamemain.s(28)
+_vram_fill (crt0.o):
+    gamemain.o                gamemain.s(29)
+_vram_inc (crt0.o):
+_vram_put (crt0.o):
+_vram_read (vram_read.o):
+_vram_unlz4 (lz4vram.o):
+_vram_unrle (vram_unrle.o):
+    gamemain.o                gamemain.s(31)
+_vram_write (crt0.o):
+    lz4vram.o                 ../neslib/lz4vram.s(10)
+    gamemain.o                gamemain.s(30)
+_vrambuf_clear (vrambuf.o):
+    gamemain.o                gamemain.s(35)
+_vrambuf_end (vrambuf.o):
+_vrambuf_flush (vrambuf.o):
+_vrambuf_put (vrambuf.o):
+addysp (addysp.o):
+    incsp8.o                  runtime/incsp8.s(8)
+    incsp6.o                  runtime/incsp6.s(8)
+    incsp5.o                  runtime/incsp5.s(8)
+    incsp4.o                  runtime/incsp4.s(8)
+    incsp3.o                  runtime/incsp3.s(8)
+    plague.o                  plague.s(819)
+    gamemain.o                gamemain.s(1587)
+addysp1 (addysp.o):
+    sub.o                     runtime/sub.s(8)
+condes (condes.o):
+copydata (copydata.o):
+    crt0.o                    ../neslib/crt0.s(6)
+decsp1 (decsp1.o):
+    scrolling.o               scrolling.s(222)
+    player.o                  player.s(369)
+    gamemain.o                gamemain.s(1587)
+    gamemain.o                gamemain.s(1587)
+decsp2 (decsp2.o):
+    plague.o                  plague.s(819)
+decsp4 (decsp4.o):
+    gamemain.o                gamemain.s(1587)
+decsp6 (decsp6.o):
+    gamemain.o                gamemain.s(1587)
+donelib (condes.o):
+incsp2 (incsp2.o):
+    staxspi.o                 runtime/staxspi.s(9)
+    staspidx.o                runtime/staspidx.s(8)
+    popptr1.o                 runtime/popptr1.s(8)
+    gamemain.o                gamemain.s(1587)
+incsp3 (incsp3.o):
+    player.o                  player.s(369)
+    gamemain.o                gamemain.s(1587)
+incsp4 (incsp4.o):
+    gamemain.o                gamemain.s(1587)
+    gamemain.o                gamemain.s(1587)
+incsp5 (incsp5.o):
+    vrambuf.o                 vrambuf.s(145)
+incsp6 (incsp6.o):
+    scrolling.o               scrolling.s(222)
+incsp8 (incsp8.o):
+    gamemain.o                gamemain.s(1587)
+initlib (condes.o):
+    crt0.o                    ../neslib/crt0.s(6)
+memcpy_getparams (memcpy.o):
+memcpy_upwards (memcpy.o):
+popa (popa.o):
+    oam_meta_spr_clip.o       ../neslib/oam_meta_spr_clip.s(3)
+    memfill.o                 ../neslib/memfill.s(3)
+    crt0.o                    ../neslib/crt0.s(6)
+popax (incsp2.o):
+    memcpy.o                  common/memcpy.s(14)
+    vram_read.o               ../neslib/vram_read.s(3)
+    splitxy.o                 ../neslib/splitxy.s(3)
+    split.o                   ../neslib/split.s(4)
+    oam_meta_spr_clip.o       ../neslib/oam_meta_spr_clip.s(3)
+    memfill.o                 ../neslib/memfill.s(3)
+    lz4vram.o                 ../neslib/lz4vram.s(10)
+    crt0.o                    ../neslib/crt0.s(6)
+popptr1 (popptr1.o):
+    udiv.o                    runtime/udiv.s(9)
+    umod.o                    runtime/umod.s(8)
+    memcpy.o                  common/memcpy.s(14)
+ptr1 (zeropage.o):
+    udiv.o                    runtime/udiv.s(10)
+    zerobss.o                 common/zerobss.s(9)
+    staxspi.o                 runtime/staxspi.s(10)
+    staspidx.o                runtime/staspidx.s(9)
+    popptr1.o                 runtime/popptr1.s(9)
+    memcpy.o                  common/memcpy.s(15)
+    copydata.o                common/copydata.s(9)
+    lz4vram.o                 ../neslib/lz4vram.s(8)
+    vrambuf.o                 vrambuf.s(11)
+    scrolling.o               scrolling.s(11)
+    player.o                  player.s(11)
+    plague.o                  plague.s(11)
+    gamemain.o                gamemain.s(11)
+ptr2 (zeropage.o):
+    strlen.o                  common/strlen.s(12)
+    memcpy.o                  common/memcpy.s(15)
+    copydata.o                common/copydata.s(9)
+    lz4vram.o                 ../neslib/lz4vram.s(8)
+ptr3 (zeropage.o):
+    memcpy.o                  common/memcpy.s(15)
+    lz4vram.o                 ../neslib/lz4vram.s(8)
+ptr4 (zeropage.o):
+    udiv.o                    runtime/udiv.s(10)
+    umod.o                    runtime/umod.s(9)
+    lz4vram.o                 ../neslib/lz4vram.s(8)
+push0 (pushax.o):
+    plague.o                  plague.s(819)
+pusha (pusha.o):
+    vrambuf.o                 vrambuf.s(145)
+    scrolling.o               scrolling.s(222)
+    plague.o                  plague.s(819)
+    gamemain.o                gamemain.s(1587)
+    gamemain.o                gamemain.s(1587)
+    gamemain.o                gamemain.s(1587)
+pusha0 (pushax.o):
+    scrolling.o               scrolling.s(222)
+    player.o                  player.s(369)
+    gamemain.o                gamemain.s(1587)
+pusha0sp (pusha.o):
+pushax (pushax.o):
+    lz4vram.o                 ../neslib/lz4vram.s(10)
+    vrambuf.o                 vrambuf.s(145)
+    scrolling.o               scrolling.s(222)
+    player.o                  player.s(369)
+    plague.o                  plague.s(819)
+    gamemain.o                gamemain.s(1587)
+    gamemain.o                gamemain.s(1587)
+    gamemain.o                gamemain.s(1587)
+    gamemain.o                gamemain.s(1587)
+    gamemain.o                gamemain.s(1587)
+    gamemain.o                gamemain.s(1587)
+pushaysp (pusha.o):
+pushw0sp (pushwsp.o):
+    gamemain.o                gamemain.s(1587)
+pushwysp (pushwsp.o):
+    gamemain.o                gamemain.s(1587)
+regbank (zeropage.o):
+    regswap2.o                runtime/regswap2.s(8)
+    vrambuf.o                 vrambuf.s(10)
+regsave (zeropage.o):
+    lz4vram.o                 ../neslib/lz4vram.s(7)
+    plague.o                  plague.s(10)
+regswap2 (regswap2.o):
+    vrambuf.o                 vrambuf.s(145)
+sp (zeropage.o):
+    subysp.o                  runtime/subysp.s(9)
+    sub.o                     runtime/sub.s(9)
+    staxspi.o                 runtime/staxspi.s(10)
+    staxsp.o                  runtime/staxsp.s(8)
+    staspidx.o                runtime/staspidx.s(9)
+    regswap2.o                runtime/regswap2.s(8)
+    pushwsp.o                 runtime/pushwsp.s(8)
+    pushax.o                  runtime/pushax.s(8)
+    pusha.o                   runtime/pusha.s(8)
+    popptr1.o                 runtime/popptr1.s(9)
+    popa.o                    runtime/popa.s(8)
+    memcpy.o                  common/memcpy.s(15)
+    incsp2.o                  runtime/incsp2.s(8)
+    icmp.o                    runtime/icmp.s(9)
+    decsp6.o                  runtime/decsp6.s(8)
+    decsp4.o                  runtime/decsp4.s(8)
+    decsp2.o                  runtime/decsp2.s(8)
+    decsp1.o                  runtime/decsp1.s(8)
+    addysp.o                  runtime/addysp.s(8)
+    add.o                     runtime/add.s(12)
+    oam_spr.o                 ../neslib/oam_spr.s(2)
+    oam_meta_spr_pal.o        ../neslib/oam_meta_spr_pal.s(2)
+    oam_meta_spr.o            ../neslib/oam_meta_spr.s(2)
+    crt0.o                    /usr/share/cc65/asminc/zeropage.inc(11)
+    vrambuf.o                 vrambuf.s(10)
+    scrolling.o               scrolling.s(10)
+    player.o                  player.s(10)
+    plague.o                  plague.s(10)
+    gamemain.o                gamemain.s(10)
+sreg (zeropage.o):
+    udiv.o                    runtime/udiv.s(10)
+    umod.o                    runtime/umod.s(9)
+    icmp.o                    runtime/icmp.s(9)
+    lz4vram.o                 ../neslib/lz4vram.s(7)
+staspidx (staspidx.o):
+    scrolling.o               scrolling.s(222)
+    player.o                  player.s(369)
+    plague.o                  plague.s(819)
+stax0sp (staxsp.o):
+staxspidx (staxspi.o):
+    player.o                  player.s(369)
+staxysp (staxsp.o):
+    plague.o                  plague.s(819)
+    gamemain.o                gamemain.s(1587)
+subysp (subysp.o):
+    plague.o                  plague.s(819)
+    gamemain.o                gamemain.s(1587)
+tmp1 (zeropage.o):
+    staxspi.o                 runtime/staxspi.s(10)
+    staspidx.o                runtime/staspidx.s(9)
+    copydata.o                common/copydata.s(9)
+    add.o                     runtime/add.s(12)
+    lz4vram.o                 ../neslib/lz4vram.s(8)
+tmp2 (zeropage.o):
+    lz4vram.o                 ../neslib/lz4vram.s(8)
+tmp3 (zeropage.o):
+    lz4vram.o                 ../neslib/lz4vram.s(8)
+tmp4 (zeropage.o):
+    lz4vram.o                 ../neslib/lz4vram.s(8)
+tosadda0 (add.o):
+    scrolling.o               scrolling.s(222)
+    player.o                  player.s(369)
+    gamemain.o                gamemain.s(1587)
+tosaddax (add.o):
+tosicmp (icmp.o):
+tosicmp0 (icmp.o):
+    plague.o                  plague.s(819)
+tossuba0 (sub.o):
+    scrolling.o               scrolling.s(222)
+    player.o                  player.s(369)
+tossubax (sub.o):
+tosudiva0 (udiv.o):
+tosudivax (udiv.o):
+tosumoda0 (umod.o):
+    gamemain.o                gamemain.s(1587)
+    gamemain.o                gamemain.s(1587)
+tosumodax (umod.o):
+udiv16 (udiv.o):
+    umod.o                    runtime/umod.s(8)
+zerobss (zerobss.o):
+    crt0.o                    ../neslib/crt0.s(6)
+

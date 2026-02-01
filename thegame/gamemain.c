@@ -30,6 +30,11 @@ unsigned char rndint(unsigned char a,unsigned char b);
 // global values
 unsigned short frame_count; // counter for keeping a running count of the frames
 unsigned short seconds;
+char circle_x[12]={20,16,10,0,-10,-16,-20,-16,-10,0,10,16};
+char circle_y[12]={0,10,16,20,16,10,0,-10,-16,-20,-16,-10};
+
+
+
 
 // main function, run after console reset
 void main(void)
@@ -114,13 +119,15 @@ void title_screen()
 */
 void play_state()
 {
-  int a = 0;
+  char ran_random_virus=1;
+  char virus_alive = 0;
   unsigned short day_count;
   unsigned char spr_id;
   unsigned char lucky_number;
   char strbuffer[32];
   char running;
   player_t player; // player object
+  char virus_x, virus_y;
   scroll_t scroller;
   //Window_t window; // location of the window
   day_count = 1; // start at one b/c this is day 1
@@ -189,21 +196,35 @@ void play_state()
       }
     }
     // check if the player is unluky every 3 seconds
-    if(seconds % 3 == 0)
+    if(seconds % 3 == 0 && !ran_random_virus)
     {
+      ran_random_virus = 1;
+       if (virus_alive ==1)
+        {
+          virus_alive = rndint(0,1);
+        }
+
       lucky_number = rndint(1,10);
-      if(lucky_number > 6 && a == 0)
+      if(lucky_number > 6 && virus_alive == 0)
       {
         // player is un lucky and must face punishment for a randum nucker picked by a 40 year old gaming console 
         // punish them!
-        a = 1;
+
+        lucky_number = rndint(0,12);
+        virus_alive = 1;
+        virus_x = player.px-player.map_posx+circle_x[lucky_number];
+        virus_y = player.py-player.map_posy+circle_y[lucky_number];
       }
     }   
 
-
-    if(a == 1)
+    if(seconds%3 ==1)
     {
-      spr_id = oam_spr(player.px+10,player.py,PLAGUE_SPRITE_INDEX,VIRUS_PALETTE,spr_id);
+      ran_random_virus =0;
+    }
+    if(virus_alive == 1)
+    {
+
+      spr_id = oam_spr(virus_x+player.map_posx,virus_y+player.map_posy,PLAGUE_SPRITE_INDEX,VIRUS_PALETTE,spr_id);
     }
 
     ppu_wait_nmi();
