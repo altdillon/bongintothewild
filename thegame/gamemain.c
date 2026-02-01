@@ -85,10 +85,6 @@ void display_static_background(const byte* pal, const byte* rle,const byte* attr
   vram_write(attr_table,64);
 }
 
-
-
-
-
 void title_screen()
 {
     char i, start_btn = 0, pad;
@@ -152,6 +148,7 @@ void play_state()
   // put_str(NTADR_C(2,15), "Nametable C, Line 15");
   // put_str(NTADR_C(2,29),"Nametable C, Line 29");
 
+  // write the static background image to Nametables A and C
   display_static_background(background_palette, nesstBackground,backGroundAttertable, NAMETABLE_A);
   display_static_background(background_palette, nesstBackground,backGroundAttertable, NAMETABLE_C);
 
@@ -161,6 +158,7 @@ void play_state()
     oam_clear(); // clear off all the old sprites
     updbuf[0] = NT_UPD_EOF;
     // draw the player, and then use the vram buffer to draw any other enviroment related stuff onto the screen 
+    pal_bg(player_pal);
     oam_spr(player.px, player.py, player.playerSp, 0,0);
     // test stuff...  
     // test table A
