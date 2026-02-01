@@ -7,4 +7,8 @@ Working title for our submission to the 2026 global game jam. This is a game for
 [Global game jam](https://globalgamejam.org/)
 
 # The theme
-The theme for this is "masks"  We're still figuring out this means. :D
+The theme for this is "masks"  We're still figuring that out.  Based on the exsperinces of the team during covid, this might mean avoiding a pluge or some sort of blight.   
+
+# Screen shots
+*The start screen*
+![start menu](https://github.com/altdillon/bongintothewild/blob/main/images/startmenuscreen.png?raw=true)
