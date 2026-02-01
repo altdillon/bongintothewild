@@ -115,6 +115,7 @@ void title_screen()
 void play_state()
 {
   unsigned short day_count;
+  unsigned char lucky_number;
   char strbuffer[32];
   char running;
   player_t player; // player object
@@ -185,7 +186,17 @@ void play_state()
         day_count++;
       }
     }
-     
+    // check if the player is unluky every 3 seconds
+    if(seconds % 3 == 0)
+    {
+      lucky_number = rndint(1,10);
+      if(lucky_number > 6)
+      {
+        // player is un lucky and must face punishment for a randum nucker picked by a 40 year old gaming console 
+
+      }
+    }   
+
     ppu_wait_nmi();
   }
 }
