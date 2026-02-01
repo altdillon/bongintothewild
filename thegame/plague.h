@@ -6,14 +6,30 @@
 #define GRIDWIDTH 40
 #define GRIDHEIGHT 20
 #define PLAGUE_SPRITE_INDEX 0xB9
-
+#include "player.h"
 /*
     Store information about the plague in question
 */
 extern unsigned char conway_grid[100];
+typedef struct
+{
+   char x;
+   char y;
+
+   char dx;
+   char dy;
+   unsigned char alive;
+
+
+} virus_t;
 
 void compute_generation();
-void draw_plague(unsigned char spr_id,unsigned char *generation,unsigned char ncells);
+unsigned char draw_virus(virus_t* virus, player_t* player, unsigned char spr_id);
+
+
+void move_virus(virus_t* virus, player_t* player);
+
+
 
 
 #endif

@@ -1,5 +1,5 @@
 #include "plague.h"
-
+#include "./../neslib/neslib.h"
 
 
 unsigned char conway_grid[100]=
@@ -140,18 +140,43 @@ unsigned char future_grid[100]=
     generating is the array of cells
     ncells is number of cells
 */
-void draw_plague(unsigned char spr_id,unsigned char *generation,unsigned char ncells)
+unsigned char draw_virus(virus_t* virus, player_t* player, unsigned char spr_id)
 {
-    unsigned char last_spr_id = spr_id;
-    unsigned char i,j;
-    for(i=0;i<ncells;i++)
-    {
-        for(j=0;j<8;j++)
-        {
-            if((generation[i] & (1 << j)) != 0)
-            {
-
-            }
-        }
-    }
+   return oam_spr(virus->x+player->map_posx,virus->y+player->map_posy,PLAGUE_SPRITE_INDEX,VIRUS_PALETTE,spr_id);
 }
+unsigned char sqrt(unsigned int x)
+{
+    unsigned char sum = 0;
+    if(x < 100)
+    {
+        sum += 7;
+        sum += (x-49)/14;
+        sum -= (x-49)*(x-49)/2744;
+    }
+    else
+    {
+        sum += 50;
+        sum += (x-2500)/100;
+        sum -= (x-2500)*(x-2500)/1000000;
+    }
+    if (sum < 1)
+    {
+        sum = 1;
+    }
+    return sum;
+}
+
+void move_virus(virus_t* virus, player_t* player)
+{
+    char vx = player->px - virus->x - player->map_posx;
+    char vy = player->py - virus->y - player->map_posy;
+
+    unsigned int norm = vx*vx + vy*vy;
+    unsigned char s = sqrt(norm);
+    vx = vx * virus->dx/s;
+    vy = vy * virus->dy/s;
+    virus->x += vx;
+    virus->y += vy;
+
+}
+
