@@ -158,6 +158,8 @@ void play_state()
   // init the scroller
   scroller.sx = 0;
   scroller.sy = 0;
+  // init the number of masks on the screen to zero
+  num_masks = 0;
 
   // write text to name table
   // put_str(NTADR_A(2,0), "Nametable A, Line 0");

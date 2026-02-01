@@ -11,3 +11,8 @@ void compute_masks(mask_t *array,unsigned char nmasks)
         array[i].y = rndint(0,127);
     }
 }
+
+void draw_mask_sprites(mask_t *maskarray,unsigned char nmasks,unsigned char spr_id)
+{
+
+}
