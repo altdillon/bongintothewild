@@ -2,7 +2,7 @@
 // include NESLIB header
 #include <stdio.h>
 #include <string.h>
-//#include <stdlib.h>
+#include <stdlib.h>
 #include "./../neslib/neslib.h"
 #include "pallets.h"
 #include "gameconfig.h"
@@ -12,7 +12,7 @@
 #include "assets.h"
 #include "gamestate.h"
 #include "plague.h"
-#include "rndhelper.h"
+//#include "rndhelper.h"
 #include "maskitem.h"
 
 //include nametables for all the screens such as title or game over
@@ -28,13 +28,15 @@ void title_screen();
 void show_title_screen(const byte* pal, const byte* rle);
 void display_static_background(const byte* pal, const byte* rle,const byte* attr_table ,unsigned int adr);
 
+unsigned char rndint(unsigned char a,unsigned char b);
+
 // global values
 unsigned short frame_count; // counter for keeping a running count of the frames
 unsigned short seconds;
 
 // pre computed values for where viruses go
-unsigned char circle_x[12]={20,16,10,0,-10,-16,-20,-16,-10,0,10,16};
-unsigned char circle_y[12]={0,10,16,20,16,10,0,-10,-16,-20,-16,-10};
+const char circle_x[12]={20,16,10,0,-10,-16,-20,-16,-10,0,10,16};
+const char circle_y[12]={0,10,16,20,16,10,0,-10,-16,-20,-16,-10};
 
 
 
@@ -203,35 +205,56 @@ void play_state()
       }
     }
     // check if t he player is lucky every 6 seconds
-    if(seconds % 6 ==0)
+    if(seconds % 6 == 0)
     {
       // take a random number to compute how many maks to draw.
       // do like double luck lol
       num_masks = rndint(0,MAX_MASKS);
       compute_masks(mask_array,num_masks);
     }
+    else if(seconds % 180 == 0)
+    {
+      num_masks = 0; // remove all the masks after 
+    }
+    if(num_masks > 0)
+    {
+
+    }
 
     // check if the player is unluky every 3 seconds
+    // if(seconds % 3 == 0 && !ran_random_virus)
+    // {
+    //   ran_random_virus = 1;
+    //    if (virus_alive ==1)
+    //     {
+    //       virus_alive = rndint(0,1);
+    //     }
+
+    //   lucky_number = rndint(1,10);
+    //   if(lucky_number > 6 && virus_alive == 0)
+    //   {
+    //     // player is un lucky and must face punishment for a randum nucker picked by a 40 year old gaming console 
+    //     // punish them!
+
+    //     lucky_number = rndint(0,12);
+    //     virus_alive = 1;
+    //     virus_x = player.px-player.map_posx+circle_x[lucky_number];
+    //     virus_y = player.py-player.map_posy+circle_y[lucky_number];
+    //   }
+    // }   
+
     if(seconds % 3 == 0 && !ran_random_virus)
     {
       ran_random_virus = 1;
-       if (virus_alive ==1)
-        {
-          virus_alive = rndint(0,1);
-        }
-
       lucky_number = rndint(1,10);
-      if(lucky_number > 6 && virus_alive == 0)
+      if(lucky_number < 4 && virus_alive == 0)
       {
-        // player is un lucky and must face punishment for a randum nucker picked by a 40 year old gaming console 
-        // punish them!
-
-        lucky_number = rndint(0,12);
         virus_alive = 1;
-        virus_x = player.px-player.map_posx+circle_x[lucky_number];
-        virus_y = player.py-player.map_posy+circle_y[lucky_number];
+        lucky_number = rndint(0,12);
+        virus_x = player.px - player.map_posx + circle_x[lucky_number];
+        virus_y = player.py - player.map_posy + circle_y[lucky_number];
       }
-    }   
+    }
 
     if(seconds%3 ==1)
     {
@@ -265,4 +288,9 @@ void put_str(unsigned int adr, const char *str)
 {
   vram_adr(adr);        // set PPU read/write address
   vram_write(str, strlen(str)); // write bytes to PPU
+}
+
+unsigned char rndint(unsigned char a,unsigned char b)
+{
+  return (rand() % (b-a)) + a;
 }
