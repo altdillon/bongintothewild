@@ -11,6 +11,9 @@
 // sprite palette that the player is using
 #define PLAYER_PALETTE 0
 #define VIRUS_PALETTE 1
+// sprite information for the mask
+#define MASK_SPRITE_INDEX 0xAF
+#define MASK_SPRITE_PALETTE 0   
 
 // game related values
 #define DEFAULT_HEALTH 99
