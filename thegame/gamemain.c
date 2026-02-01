@@ -124,6 +124,7 @@ void play_state()
   unsigned short day_count;
   unsigned char spr_id;
   unsigned char lucky_number;
+  unsigned char num_masks; // how many masks to draw on the screen if we're going to do that
   char strbuffer[32];
   char running;
   player_t player; // player object
@@ -195,6 +196,14 @@ void play_state()
         day_count++;
       }
     }
+    // check if t he player is lucky every 6 seconds
+    if(seconds % 6 ==0)
+    {
+      // take a random number to compute how many maks to draw.
+      // do like double luck lol
+      num_masks = rndint(0,MAX_MASKS);
+    }
+
     // check if the player is unluky every 3 seconds
     if(seconds % 3 == 0 && !ran_random_virus)
     {
