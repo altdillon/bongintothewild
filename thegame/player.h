@@ -10,13 +10,13 @@ typedef unsigned char player_dir;
 // struct to hold some basic information about the player
 typedef struct {
   int ctrlr; // controller that the player is driven by
-  // position vector for the player
+  // position vector for the player; this is the position on the screen, not in the map world
   unsigned char px;
   unsigned char py;
-  // delta vector for the player
+  // delta vector for the player, so how fast the player moves on the spring
   unsigned char dx;
   unsigned char dy;
-  // player sprite
+  // player sprite, sprite index for the pattern table
   unsigned char playerSp;
   // game variables
   unsigned char health; // how much heath the player has, typically 100
