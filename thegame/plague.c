@@ -133,3 +133,25 @@ unsigned char future_grid[100]=
     
  
 }
+
+/*
+    Draw the sprites for the plege
+    spr_id is the last used sprite id
+    generating is the array of cells
+    ncells is number of cells
+*/
+void draw_plague(unsigned char spr_id,unsigned char *generation,unsigned char ncells)
+{
+    unsigned char last_spr_id = spr_id;
+    unsigned char i,j;
+    for(i=0;i<ncells;i++)
+    {
+        for(j=0;j<8;j++)
+        {
+            if((generation[i] & (1 << j)) != 0)
+            {
+
+            }
+        }
+    }
+}

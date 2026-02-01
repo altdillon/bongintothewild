@@ -13,7 +13,7 @@
 extern unsigned char conway_grid[100];
 
 void compute_generation();
-
+void draw_plague(unsigned char spr_id,unsigned char *generation,unsigned char ncells);
 
 
 #endif
