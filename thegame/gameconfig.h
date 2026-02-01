@@ -8,6 +8,9 @@
 // limits for the X axis
 #define LOWER_SCROLL_LIMIT_X 20
 #define UPPER_SCROLL_LIMIT_X 230
+// sprite palette that the player is using
+#define PLAYER_PALETTE 0
+#define VIRUS_PALETTE 1
 
 // game related values
 #define DEFAULT_HEALTH 99

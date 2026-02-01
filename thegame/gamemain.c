@@ -165,7 +165,7 @@ void play_state()
     oam_clear(); // clear off all the old sprites
     updbuf[0] = NT_UPD_EOF;
     // draw the player, and then use the vram buffer to draw any other enviroment related stuff onto the screen 
-    oam_spr(player.px, player.py, player.playerSp, 0,0);
+    oam_spr(player.px, player.py, player.playerSp, PLAYER_PALETTE,0);
   
 
       
