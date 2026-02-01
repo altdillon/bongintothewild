@@ -185,7 +185,8 @@ void play_state()
       {
         day_count++;
       }
-    } 
+    }
+     
     ppu_wait_nmi();
   }
 }
