@@ -114,7 +114,9 @@ void title_screen()
 */
 void play_state()
 {
+  int a = 0;
   unsigned short day_count;
+  unsigned char spr_id;
   unsigned char lucky_number;
   char strbuffer[32];
   char running;
@@ -165,7 +167,7 @@ void play_state()
     oam_clear(); // clear off all the old sprites
     updbuf[0] = NT_UPD_EOF;
     // draw the player, and then use the vram buffer to draw any other enviroment related stuff onto the screen 
-    oam_spr(player.px, player.py, player.playerSp, PLAYER_PALETTE,0);
+    spr_id = oam_spr(player.px, player.py, player.playerSp, PLAYER_PALETTE,0);
   
 
       
@@ -190,12 +192,19 @@ void play_state()
     if(seconds % 3 == 0)
     {
       lucky_number = rndint(1,10);
-      if(lucky_number > 6)
+      if(lucky_number > 6 && a == 0)
       {
         // player is un lucky and must face punishment for a randum nucker picked by a 40 year old gaming console 
-
+        // punish them!
+        a = 1;
       }
     }   
+
+
+    if(a == 1)
+    {
+      spr_id = oam_spr(player.px+10,player.py,PLAGUE_SPRITE_INDEX,VIRUS_PALETTE,spr_id);
+    }
 
     ppu_wait_nmi();
   }
