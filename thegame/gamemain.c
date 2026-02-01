@@ -161,23 +161,7 @@ void play_state()
     updbuf[0] = NT_UPD_EOF;
     // draw the player, and then use the vram buffer to draw any other enviroment related stuff onto the screen 
     oam_spr(player.px, player.py, player.playerSp, 0,0);
-    // test stuff...  
-    // test table A
-    // sprintf(strbuffer,"Nametable A, Line 0 %d",seconds);
-    // vrambuf_put(NTADR_A(2,0),strbuffer,strlen(strbuffer));
-    // sprintf(strbuffer,"Nametable A, Line 15");
-    // vrambuf_put(NTADR_A(2,15),strbuffer,strlen(strbuffer));
-    // sprintf(strbuffer,"Nametable A, Line 29");
-    // vrambuf_put(NTADR_A(2,26),strbuffer,strlen(strbuffer));
-    // test table C
-    // sprintf(strbuffer,"Nametable C, Line 0");
-    // vrambuf_put(NTADR_C(2,0),strbuffer,strlen(strbuffer));
-    // sprintf(strbuffer,"Nametable C, Line 15");
-    // vrambuf_put(NTADR_C(2,15),strbuffer,strlen(strbuffer));
-    // sprintf(strbuffer,"Nametable C, Line 29");
-    // vrambuf_put(NTADR_C(2,26),strbuffer,strlen(strbuffer));
-    //ppu_wait_nmi();
-    // end of test stuff... 
+   
     // update player from the controller
     move_player(&player);
     // figure out if we have to scroll
