@@ -11,16 +11,14 @@
     Store information about the plague in question
 */
 extern unsigned char conway_grid[100];
+
 typedef struct
 {
    char x;
    char y;
-
    char dx;
    char dy;
    unsigned char alive;
-
-
 } virus_t;
 
 void compute_generation();
