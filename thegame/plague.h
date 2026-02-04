@@ -5,7 +5,6 @@
 #include "gameconfig.h"
 #define GRIDWIDTH 40
 #define GRIDHEIGHT 20
-#define PLAGUE_SPRITE_INDEX 0xB9
 #include "player.h"
 /*
     Store information about the plague in question

@@ -161,7 +161,7 @@ void play_state()
   scroller.sy = 0;
   // init the number of masks on the screen to zero
   num_masks = 0;
-  
+  num_viruses = 0;
 
   // write text to name table
   // put_str(NTADR_A(2,0), "Nametable A, Line 0");
@@ -186,6 +186,9 @@ void play_state()
     spr_id = oam_spr(player.px, player.py, player.playerSp, PLAYER_PALETTE,0);
   
 
+    /*
+      Draw logic 
+    */
       
     // update player from the controller
     move_player(&player);
@@ -195,6 +198,21 @@ void play_state()
     //map_scroll(scroll_t *scroll, player_t *player, char ncontroller)
     map_scroll(&scroller,&player,0);
     scroll(scroller.sx,scroller.sy);
+
+    // Test code for moving a virus on the screen
+    if(num_viruses > 0)
+    {
+      //spr_id = 0;
+      for(i=0;i<num_viruses;i++)
+      {
+        spr_id = oam_spr(virus_arr[i].x,virus_arr[i].y,PLAGUE_SPRITE_INDEX,VIRUS_PALETTE,spr_id);
+      }
+    }
+    // end test code
+
+    /*
+      Game logic
+    */
 
     frame_count++;
     if(frame_count % 60 == 0)

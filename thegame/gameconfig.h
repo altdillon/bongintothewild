@@ -11,6 +11,7 @@
 // sprite palette that the player is using
 #define PLAYER_PALETTE 0
 #define VIRUS_PALETTE 1
+#define PLAGUE_SPRITE_INDEX 0xB9
 // running numbers of viruses
 #define MAX_VIRUS 6
 #define VIRUS_MIN_DX 1
