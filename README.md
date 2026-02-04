@@ -9,6 +9,11 @@ Working title for our submission to the 2026 global game jam. This is a game for
 # The theme
 The theme for this is "masks"  We're still figuring that out.  Based on the exsperinces of the team during covid, this might mean avoiding a pluge or some sort of blight.   
 
+# Downloads
+[Version of the rom as of 2/3/2026](https://github.com/altdillon/bongintothewild/raw/refs/heads/main/builds/bongintothewild_build_2_3_26.nes)
+
 # Screen shots
 *The start screen*
 ![start menu](https://github.com/altdillon/bongintothewild/blob/main/images/startmenuscreen.png?raw=true)
+*Basic game play*
+![basic gameplay](https://raw.githubusercontent.com/altdillon/bongintothewild/refs/heads/main/images/basic_gameplay.png)
