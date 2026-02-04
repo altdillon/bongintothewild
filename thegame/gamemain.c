@@ -133,7 +133,7 @@ void play_state()
   char running;
   mask_t mask_array[MAX_MASKS];
   player_t player; // player object
-  virus_t virus;
+  virus_t virus_arr[MAX_MASKS];
   scroll_t scroller;
   //Window_t window; // location of the window
   day_count = 1; // start at one b/c this is day 1
@@ -161,11 +161,6 @@ void play_state()
   scroller.sy = 0;
   // init the number of masks on the screen to zero
   num_masks = 0;
-  virus.x =0;
-  virus.y = 0;
-  virus.dx = 3;
-  virus.dy = 3;
-  virus.alive = 0;
   
 
   // write text to name table
@@ -194,7 +189,7 @@ void play_state()
       
     // update player from the controller
     move_player(&player);
-    move_virus(&virus, &player);
+    //move_virus(&virus, &player);
     // figure out if we have to scroll
     // scroll if we need to
     //map_scroll(scroll_t *scroll, player_t *player, char ncontroller)
@@ -205,10 +200,6 @@ void play_state()
     if(frame_count % 60 == 0)
     {
       seconds++;
-      if (virus.alive >0)
-      {
-        virus.alive--;
-      }
       if(seconds % DAY_LENGTH == 0) // is daycount a multiple of 90?
       {
         day_count++;
@@ -230,20 +221,21 @@ void play_state()
    
 
       lucky_number = rndint(1,10);
-      if(lucky_number >= 6 && virus.alive == 0)
+      if(lucky_number >= 6)
       {
         // player is un lucky and must face punishment for a randum nucker picked by a 40 year old gaming console 
         // punish them!
 
         // lucky_number = rndint(0,12);
         // virus.alive = rndint(6,11);
-        // virus.x = player.px-player.map_posx+circle_x[lucky_number];
-        // virus.y = player.py-player.map_posy+circle_y[lucky_number];
         // figue hout how many viruses to draw.  Then figure out where to draw them
         num_viruses = rndint(2,MAX_MASKS);
         for(i=0;i<num_viruses;i++)
         {
           // figure out which part of the random circule to draw in
+          virus_arr[i].x = player.px-player.map_posx+circle_x[lucky_number];
+          virus_arr[i].y = player.py-player.map_posy+circle_y[lucky_number];
+
         }
       }
     }   
@@ -252,11 +244,11 @@ void play_state()
     {
       ran_random_virus =0;
     }
-    if(virus.alive > 0)
-    {
+    // if(virus.alive > 0)
+    // {
 
-      spr_id = oam_spr(virus.x+player.map_posx,virus.y+player.map_posy,PLAGUE_SPRITE_INDEX,VIRUS_PALETTE,spr_id);
-    }
+    //   spr_id = oam_spr(virus.x+player.map_posx,virus.y+player.map_posy,PLAGUE_SPRITE_INDEX,VIRUS_PALETTE,spr_id);
+    // }
     
 
     ppu_wait_nmi();
