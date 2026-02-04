@@ -1,4 +1,5 @@
 #include "plague.h"
+#include "rndhelper.h"
 #include "./../neslib/neslib.h"
 
 
@@ -180,3 +181,8 @@ void move_virus(virus_t* virus, player_t* player,unsigned char nvirus)
 
 }
 
+
+void init_virus(virus_t* virus,unsigned char nvirus)
+{
+
+}
