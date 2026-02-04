@@ -122,11 +122,13 @@ void title_screen()
 */
 void play_state()
 {
+  unsigned char i;
   char ran_random_virus=1;
   unsigned short day_count;
   unsigned char spr_id;
   unsigned char lucky_number;
   unsigned char num_masks; // how many masks to draw on the screen if we're going to do that
+  unsigned char num_viruses; // number of viruses that will be drawn on the screen
   char strbuffer[32];
   char running;
   mask_t mask_array[MAX_MASKS];
@@ -237,6 +239,12 @@ void play_state()
         // virus.alive = rndint(6,11);
         // virus.x = player.px-player.map_posx+circle_x[lucky_number];
         // virus.y = player.py-player.map_posy+circle_y[lucky_number];
+        // figue hout how many viruses to draw.  Then figure out where to draw them
+        num_viruses = rndint(2,MAX_MASKS);
+        for(i=0;i<num_viruses;i++)
+        {
+          // figure out which part of the random circule to draw in
+        }
       }
     }   
 
