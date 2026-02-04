@@ -25,7 +25,7 @@ unsigned char draw_virus(virus_t* virus, player_t* player, unsigned char spr_id)
 
 
 void move_virus(virus_t* virus, player_t* player,unsigned char nvirus);
-void init_virus(virus_t* virus,unsigned char nvirus);
+void init_virus(player_t *player,virus_t* virus,unsigned char nmaxvirus);
 
 
 

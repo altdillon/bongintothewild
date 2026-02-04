@@ -33,8 +33,8 @@ unsigned short frame_count; // counter for keeping a running count of the frames
 unsigned short seconds;
 
 // pre computed values for where viruses go
-const char circle_x[12]={20,16,10,0,-10,-16,-20,-16,-10,0,10,16};
-const char circle_y[12]={0,10,16,20,16,10,0,-10,-16,-20,-16,-10};
+// const char circle_x[12]={20,16,10,0,-10,-16,-20,-16,-10,0,10,16};
+// const char circle_y[12]={0,10,16,20,16,10,0,-10,-16,-20,-16,-10};
 
 
 
@@ -248,18 +248,20 @@ void play_state()
         // lucky_number = rndint(0,12);
         // virus.alive = rndint(6,11);
         // figue hout how many viruses to draw.  Then figure out where to draw them
-        num_viruses = rndint(2,MAX_MASKS);
-        for(i=0;i<num_viruses;i++)
-        {
-          lucky_number = rndint(0,12);  // Reuse 'lucky_number' b/c FU Pocket did this and they're pretty sharp
-          // figure out which part of the random circule to draw in
-          virus_arr[i].x = player.px-player.map_posx+circle_x[lucky_number];
-          virus_arr[i].y = player.py-player.map_posy+circle_y[lucky_number];
-          // set the dx and dy of the virus to a random value
-          virus_arr[i].dx = rndint(VIRUS_MIN_DX,VIRUS_MAX_DX);
-          virus_arr[i].dy = rndint(VIRUS_MIN_DY,VIRUS_MAX_DY);
+        // num_viruses = rndint(2,MAX_MASKS);
+        // for(i=0;i<num_viruses;i++)
+        // {
+        //   lucky_number = rndint(0,12);  // Reuse 'lucky_number' b/c FU Pocket did this and they're pretty sharp
+        //   // figure out which part of the random circule to draw in
+        //   virus_arr[i].x = player.px-player.map_posx+circle_x[lucky_number];
+        //   virus_arr[i].y = player.py-player.map_posy+circle_y[lucky_number];
+        //   // set the dx and dy of the virus to a random value
+        //   virus_arr[i].dx = rndint(VIRUS_MIN_DX,VIRUS_MAX_DX);
+        //   virus_arr[i].dy = rndint(VIRUS_MIN_DY,VIRUS_MAX_DY);
 
-        }
+        // }
+        num_viruses = rndint(2,MAX_VIRUS);
+        init_virus(&player,virus_arr,num_viruses);
       }
     }   
 

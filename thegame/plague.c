@@ -182,7 +182,19 @@ void move_virus(virus_t* virus, player_t* player,unsigned char nvirus)
 }
 
 
-void init_virus(virus_t* virus,unsigned char nvirus)
+void init_virus(player_t *player,virus_t *virus,unsigned char nmaxvirus)
 {
-
+    // look up tables for where to draw the virues
+    const char circle_x[12]={20,16,10,0,-10,-16,-20,-16,-10,0,10,16};
+    const char circle_y[12]={0,10,16,20,16,10,0,-10,-16,-20,-16,-10};
+    // use a random number generator to figurer out how many virues to draw
+    unsigned char nvirues = nmaxvirus;
+    unsigned char circ_index; 
+    unsigned char i;
+    for(i=0;i<nvirues;i++)
+    {
+        circ_index = rndint(0,12);// pick a random number from the look up tables at the top of the function
+        virus[i].x = player->px-player->map_posx+circle_x[circ_index];
+        virus[i].y = player->py-player->map_posy+circle_y[circ_index];
+    }
 }
