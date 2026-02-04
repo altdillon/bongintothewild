@@ -13,6 +13,10 @@
 #define VIRUS_PALETTE 1
 // running numbers of viruses
 #define MAX_VIRUS 6
+#define VIRUS_MIN_DX 1
+#define VIRUS_MAX_DX 4
+#define VIRUS_MIN_DY 1
+#define VIRUS_MAX_DY 4
 // sprite information for the mask
 #define MAX_MASKS 10    // max number of masks that can be shown on the scren
 #define MASK_SPRITE_INDEX 0xAF

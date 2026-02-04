@@ -235,6 +235,7 @@ void play_state()
           // figure out which part of the random circule to draw in
           virus_arr[i].x = player.px-player.map_posx+circle_x[lucky_number];
           virus_arr[i].y = player.py-player.map_posy+circle_y[lucky_number];
+          // set the dx and dy of the virus to a random value
 
         }
       }
