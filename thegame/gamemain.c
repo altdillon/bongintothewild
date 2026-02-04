@@ -192,7 +192,7 @@ void play_state()
       
     // update player from the controller
     move_player(&player);
-    //move_virus(&virus, &player);
+    move_virus(virus_arr, &player,num_viruses);
     // figure out if we have to scroll
     // scroll if we need to
     //map_scroll(scroll_t *scroll, player_t *player, char ncontroller)
@@ -205,7 +205,8 @@ void play_state()
       //spr_id = 0;
       for(i=0;i<num_viruses;i++)
       {
-        spr_id = oam_spr(virus_arr[i].x,virus_arr[i].y,PLAGUE_SPRITE_INDEX,VIRUS_PALETTE,spr_id);
+        // draw the virus sprites, but with an offset
+        spr_id = oam_spr(virus_arr[i].x-scroller.sx,virus_arr[i].y-scroller.sy,PLAGUE_SPRITE_INDEX,VIRUS_PALETTE,spr_id);
       }
     }
     // end test code

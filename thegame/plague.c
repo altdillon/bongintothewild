@@ -166,17 +166,17 @@ unsigned char sqrt(unsigned int x)
     return sum;
 }
 
-void move_virus(virus_t* virus, player_t* player)
+void move_virus(virus_t* virus, player_t* player,unsigned char nvirus)
 {
-    char vx = player->px - virus->x - player->map_posx;
-    char vy = player->py - virus->y - player->map_posy;
+    // char vx = player->px - virus->x - player->map_posx;
+    // char vy = player->py - virus->y - player->map_posy;
 
-    unsigned int norm = vx*vx + vy*vy;
-    unsigned char s = sqrt(norm);
-    vx = vx * virus->dx/s;
-    vy = vy * virus->dy/s;
-    virus->x += vx;
-    virus->y += vy;
+    // unsigned int norm = vx*vx + vy*vy;
+    // unsigned char s = sqrt(norm);
+    // vx = vx * virus->dx/s;
+    // vy = vy * virus->dy/s;
+    // virus->x += vx;
+    // virus->y += vy;
 
 }
 
