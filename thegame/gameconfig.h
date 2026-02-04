@@ -11,6 +11,8 @@
 // sprite palette that the player is using
 #define PLAYER_PALETTE 0
 #define VIRUS_PALETTE 1
+// running numbers of viruses
+#define MAX_VIRUS 6
 // sprite information for the mask
 #define MAX_MASKS 10    // max number of masks that can be shown on the scren
 #define MASK_SPRITE_INDEX 0xAF

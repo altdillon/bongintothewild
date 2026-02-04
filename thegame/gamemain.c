@@ -233,10 +233,10 @@ void play_state()
         // player is un lucky and must face punishment for a randum nucker picked by a 40 year old gaming console 
         // punish them!
 
-        lucky_number = rndint(0,12);
-        virus.alive = rndint(6,11);
-        virus.x = player.px-player.map_posx+circle_x[lucky_number];
-        virus.y = player.py-player.map_posy+circle_y[lucky_number];
+        // lucky_number = rndint(0,12);
+        // virus.alive = rndint(6,11);
+        // virus.x = player.px-player.map_posx+circle_x[lucky_number];
+        // virus.y = player.py-player.map_posy+circle_y[lucky_number];
       }
     }   
 
