@@ -5,6 +5,7 @@ Working title for our submission to the 2026 global game jam. This is a game for
 
 # The game jam
 [Global game jam](https://globalgamejam.org/)
+[Age of the mask global game jam page](https://globalgamejam.org/games/2026/age-mask-6)
 
 # The theme
 The theme for this is "masks"  We're still figuring that out.  Based on the exsperinces of the team during covid, this might mean avoiding a pluge or some sort of blight.   
