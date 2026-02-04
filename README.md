@@ -4,7 +4,7 @@ Working title for our submission to the 2026 global game jam. This is a game for
 [Making games for the Nes](https://www.amazon.com/Making-Games-NES-Steven-Hugg/dp/1075952727).  
 
 # The game jam
-[Global game jam](https://globalgamejam.org/)
+[Global game jam](https://globalgamejam.org/) <br>
 [Age of the mask global game jam page](https://globalgamejam.org/games/2026/age-mask-6)
 
 # The theme
