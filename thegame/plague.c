@@ -178,7 +178,17 @@ void move_virus(virus_t* virus, player_t* player,unsigned char nvirus)
     // vy = vy * virus->dy/s;
     // virus->x += vx;
     // virus->y += vy;
-
+    char vx;
+    char xy;
+    // interate through all the virues
+    unsigned char i;
+    for(i=0;i<nvirus;i++) 
+    {
+        if(virus[i].is_alive == 1)
+        {
+            // compute a 
+        }
+    }
 }
 
 
@@ -221,5 +231,5 @@ unsigned char determine_is_virues_alive(virus_t* varr,unsigned char nvirueses)
             varr[i].time_alive -= 1;
         }
     }
-    return removed_virues;
+    return removed_virues; 
 }
