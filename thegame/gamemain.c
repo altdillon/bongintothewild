@@ -218,6 +218,7 @@ void play_state()
     frame_count++;
     if(frame_count % 60 == 0)
     {
+      num_viruses = determine_is_virues_alive(virus_arr,num_viruses);
       seconds++;
       if(seconds % DAY_LENGTH == 0) // is daycount a multiple of 90?
       {
@@ -250,10 +251,15 @@ void play_state()
       }
     }   
 
-    if(seconds%3 ==1)
+    if(num_viruses == 0)
     {
-      ran_random_virus =0;
+      ran_random_virus = 0;
     }
+
+    // if(seconds%3 ==1)
+    // {
+    //   ran_random_virus =0;
+    // }
     // if(virus.alive > 0)
     // {
 
