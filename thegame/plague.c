@@ -200,10 +200,22 @@ void init_virus(player_t *player,virus_t *virus,unsigned char nmaxvirus)
         virus[i].y = player->py + circle_y[circ_index] * dist;
         // determine how long to keep the virues alive for
         virus[i].time_alive = rndint(VIRUS_MIN_TIME,VIRUS_MAX_TIME);
+        virus[i].is_alive = 1;
     }
 }
 
-void determine_is_virues_alive(virus_t* varr,unsigned char nvirueses)
+unsigned char determine_is_virues_alive(virus_t* varr,unsigned char nvirueses)
 {
-
+    unsigned char i;
+    for(i=0;i<nvirueses;i++)
+    {
+        if(varr[i].time_alive == 0)
+        {
+            varr[i].is_alive = 0; // kill the virues
+        }
+        else
+        {
+            varr[i].time_alive -= 1;
+        }
+    }
 }
