@@ -199,8 +199,8 @@ void init_virus(player_t *player,virus_t *virus,unsigned char nmaxvirus)
         virus[i].x = player->px + circle_x[circ_index] * dist;
         virus[i].y = player->py + circle_y[circ_index] * dist;
         // determine how long to keep the virues alive for
-        //virus[i].time_alive = rndint(VIRUS_MIN_TIME,VIRUS_MAX_TIME);
-        virus[i] .time_alive = 6;
+        virus[i].time_alive = rndint(VIRUS_MIN_TIME,VIRUS_MAX_TIME);
+        //virus[i] .time_alive = 6;
         virus[i].is_alive = 1;
     }
 }
