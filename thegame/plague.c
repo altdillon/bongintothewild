@@ -179,14 +179,16 @@ void move_virus(virus_t* virus, player_t* player,unsigned char nvirus)
     // virus->x += vx;
     // virus->y += vy;
     char vx;
-    char xy;
+    char vy;
     // interate through all the virues
     unsigned char i;
     for(i=0;i<nvirus;i++) 
     {
         if(virus[i].is_alive == 1)
         {
-            // compute a 
+            // compute a delta between the player and the virues
+            vx = player->px - virus[i].x - player->map_posx;
+            vy = player->py - virus[i].y - player->map_posy;
         }
     }
 }
