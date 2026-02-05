@@ -17,7 +17,7 @@ typedef struct
    char y;
    char dx;
    char dy;
-   unsigned char alive;
+   unsigned char time_alive; // time that the virus gets to live for
 } virus_t;
 
 void compute_generation();
@@ -27,6 +27,10 @@ unsigned char draw_virus(virus_t* virus, player_t* player, unsigned char spr_id)
 void move_virus(virus_t* virus, player_t* player,unsigned char nvirus);
 void init_virus(player_t *player,virus_t* virus,unsigned char nmaxvirus);
 
-
+/*
+    Every second call this function in order to determine how long
+    to keep a virues alive
+*/
+void determine_is_virues_alive(virus_t* varr,unsigned char nvirueses);
 
 #endif

@@ -194,10 +194,16 @@ void init_virus(player_t *player,virus_t *virus,unsigned char nmaxvirus)
     unsigned char i;
     for(i=0;i<nvirues;i++)
     {
+        // figure out where to draw the virues
         circ_index = rndint(0,12);// pick a random number from the look up tables at the top of the function
-        //virus[i].x = player->px-player->map_posx+circle_x[circ_index];
-        //virus[i].y = player->py-player->map_posy+circle_y[circ_index];
         virus[i].x = player->px + circle_x[circ_index] * dist;
         virus[i].y = player->py + circle_y[circ_index] * dist;
+        // determine how long to keep the virues alive for
+        virus[i].time_alive = rndint(VIRUS_MIN_TIME,VIRUS_MAX_TIME);
     }
+}
+
+void determine_is_virues_alive(virus_t* varr,unsigned char nvirueses)
+{
+
 }

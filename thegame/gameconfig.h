@@ -18,6 +18,9 @@
 #define VIRUS_MAX_DX 4
 #define VIRUS_MIN_DY 1
 #define VIRUS_MAX_DY 4
+// min and max time that we can have the virues randomly stay alive for
+#define VIRUS_MIN_TIME 2
+#define VIRUS_MAX_TIME 20
 // sprite information for the mask
 #define MAX_MASKS 10    // max number of masks that can be shown on the scren
 #define MASK_SPRITE_INDEX 0xAF
