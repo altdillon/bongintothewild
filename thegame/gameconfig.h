@@ -13,7 +13,7 @@
 #define VIRUS_PALETTE 1
 #define PLAGUE_SPRITE_INDEX 0xB9
 // running numbers of viruses
-#define MAX_VIRUS 6
+#define MAX_VIRUS 10
 #define VIRUS_MIN_DX 1
 #define VIRUS_MAX_DX 4
 #define VIRUS_MIN_DY 1
