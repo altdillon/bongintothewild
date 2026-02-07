@@ -17,6 +17,8 @@ typedef struct
    char y;
    char dx;
    char dy;
+   signed char subx;
+   signed char suby;
    unsigned char speed; // speed of the virues
    unsigned char time_alive; // time that the virus gets to live for
    unsigned char is_alive;
