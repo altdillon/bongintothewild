@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "plague.h"
 #include "rndhelper.h"
 #include "./../neslib/neslib.h"
@@ -178,8 +179,15 @@ void move_virus(virus_t* virus, player_t* player,unsigned char nvirus)
     // vy = vy * virus->dy/s;
     // virus->x += vx;
     // virus->y += vy;
+
+    // vector for diffrence vector
     char vx;
     char vy;
+    char abs_vx;
+    char abs_vy;
+    // vector the unit vector
+    char ux;
+    char uy;
     // interate through all the virues
     unsigned char i;
     for(i=0;i<nvirus;i++) 
@@ -189,6 +197,19 @@ void move_virus(virus_t* virus, player_t* player,unsigned char nvirus)
             // compute a delta between the player and the virues
             vx = player->px - virus[i].x - player->map_posx;
             vy = player->py - virus[i].y - player->map_posy;
+            abs_vx = abs(vx);
+            abs_vy = abs(vy);
+            // compute a unit vector, using cool net methods
+            if(vx > vy)
+            {
+                ux = (vx << 7) / abs_vx;
+                uy = (vy << 7) / abs_vx;
+            }
+            else 
+            {
+                ux = (vx << 7) / abs_vy;
+                uy = (vx << 7) / abs_vy;
+            }
         }
     }
 }
