@@ -187,6 +187,7 @@ void move_virus(virus_t* virus, player_t* player, unsigned char nvirus)
         if(player->px < virus[i].x)
         {
             virus[i].x -= virus[i].speed;
+            
         }
         if(player->px > virus[i].x)
         {

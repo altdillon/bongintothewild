@@ -32,11 +32,6 @@ void display_static_background(const byte* pal, const byte* rle,const byte* attr
 unsigned short frame_count; // counter for keeping a running count of the frames
 unsigned short seconds;
 
-// pre computed values for where viruses go
-// const char circle_x[12]={20,16,10,0,-10,-16,-20,-16,-10,0,10,16};
-// const char circle_y[12]={0,10,16,20,16,10,0,-10,-16,-20,-16,-10};
-
-
 // global game state value
 gamestatus_t gamestate;
 
@@ -259,17 +254,6 @@ void play_state()
     {
       ran_random_virus = 0;
     }
-
-    // if(seconds%3 ==1)
-    // {
-    //   ran_random_virus =0;
-    // }
-    // if(virus.alive > 0)
-    // {
-
-    //   spr_id = oam_spr(virus.x+player.map_posx,virus.y+player.map_posy,PLAGUE_SPRITE_INDEX,VIRUS_PALETTE,spr_id);
-    // }
-    
 
     ppu_wait_nmi();
   }
