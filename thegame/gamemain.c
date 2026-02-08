@@ -27,6 +27,7 @@ void play_state();
 void title_screen();
 void show_title_screen(const byte* pal, const byte* rle);
 void display_static_background(const byte* pal, const byte* rle,const byte* attr_table ,unsigned int adr);
+void you_died_screen();
 
 // global values
 unsigned short frame_count; // counter for keeping a running count of the frames
@@ -214,7 +215,7 @@ void play_state()
     {
       if(dist_from_player(&player,&virus_arr[i]) < VIRUS_MIN_DIST)
       {
-        running = 0; // for now just kill the player
+        //running = 0; // for now just kill the player
       }
     }
   
@@ -284,4 +285,9 @@ void put_str(unsigned int adr, const char *str)
 {
   vram_adr(adr);        // set PPU read/write address
   vram_write(str, strlen(str)); // write bytes to PPU
+}
+
+void you_died_screen()
+{
+
 }
