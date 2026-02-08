@@ -33,4 +33,9 @@ void init_virus(player_t *player,virus_t* virus,unsigned char nmaxvirus);
 */
 unsigned char determine_is_virues_alive(virus_t* varr,unsigned char nvirueses);
 
+/*
+    functions to determine if the player registers a hit
+*/
+unsigned char register_hit(const player_t *player,const virus_t *virues,unsigned char nviruses);
+
 #endif

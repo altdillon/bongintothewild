@@ -248,3 +248,10 @@ unsigned char determine_is_virues_alive(virus_t* varr,unsigned char nvirueses)
     }
     return removed_virues; 
 }
+
+
+unsigned char register_hit(const player_t *player,const virus_t *virues,unsigned char nviruses)
+{
+
+    return 0; // stub...
+}
