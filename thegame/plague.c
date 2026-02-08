@@ -146,6 +146,7 @@ unsigned char draw_virus(virus_t* virus, player_t* player, unsigned char spr_id)
 {
    return oam_spr(virus->x+player->map_posx,virus->y+player->map_posy,PLAGUE_SPRITE_INDEX,VIRUS_PALETTE,spr_id);
 }
+
 unsigned char sqrt(unsigned int x)
 {
     unsigned char sum = 0;
@@ -176,38 +177,39 @@ char iabs(char x)
 void move_virus(virus_t* virus, player_t* player, unsigned char nvirus)
 {
     signed char dx, dy;
-    unsigned char adx, ady;
-    unsigned char denom;
-    signed char ux, uy;
     unsigned char i;
 
     for(i = 0; i < nvirus; i++)
     {
-        if(!virus[i].is_alive) continue;
+        if(!virus[i].is_alive) continue; // if the virus is dead, just skip
 
-        dx = (player->px - player->map_posx) - virus[i].x;
-        dy = (player->py - player->map_posy) - virus[i].y;
+        // compute the deleta between the virues and the player
+        dx = virus[i].x - player->px;
+        dy = virus[i].y - player->py;
 
-        adx = iabs(dx);
-        ady = iabs(dy);
+        // dx = (player->px - player->map_posx) - virus[i].x;
+        // dy = (player->py - player->map_posy) - virus[i].y;
 
-        if(adx == 0 && ady == 0) continue;
+        // adx = iabs(dx);
+        // ady = iabs(dy);
 
-        denom = (adx > ady) ? adx : ady;
+        // if(adx == 0 && ady == 0) continue;
 
-        // fixed-point unit vector (Q7)
-        ux = (dx << 7) / denom;
-        uy = (dy << 7) / denom;
+        // denom = (adx > ady) ? adx : ady;
 
-        // apply speed, shift back down
-        virus[i].subx += (ux * virus[i].speed);
-        virus[i].suby += (uy * virus[i].speed);
+        // // fixed-point unit vector (Q7)
+        // ux = (dx << 7) / denom;
+        // uy = (dy << 7) / denom;
 
-        virus[i].x += virus[i].subx >> 7;
-        virus[i].y += virus[i].suby >> 7;
+        // // apply speed, shift back down
+        // virus[i].subx += (ux * virus[i].speed);
+        // virus[i].suby += (uy * virus[i].speed);
 
-        virus[i].subx &= 0x7F;
-        virus[i].suby &= 0x7F;
+        // virus[i].x += virus[i].subx >> 7;
+        // virus[i].y += virus[i].suby >> 7;
+
+        // virus[i].subx &= 0x7F;
+        // virus[i].suby &= 0x7F;
  
     }
 }
@@ -233,7 +235,7 @@ void init_virus(player_t *player,virus_t *virus,unsigned char nmaxvirus)
         virus[i].time_alive = rndint(VIRUS_MIN_TIME,VIRUS_MAX_TIME);
         //virus[i] .time_alive = 6;
         virus[i].is_alive = 1;
-        virus[i].speed = 4; // right now just make this a defult value, TODO: make this not a something else
+        virus[i].speed = 8; // right now just make this a defult value, TODO: make this not a something else
     }
 }
 
