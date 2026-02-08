@@ -37,12 +37,12 @@ unsigned short seconds;
 // const char circle_y[12]={0,10,16,20,16,10,0,-10,-16,-20,-16,-10};
 
 
-
+// global game state value
+gamestatus_t gamestate;
 
 // main function, run after console reset
 void main(void)
 {
-  gamestatus_t gamestate;
   // informal values for game state
   // NOTE: This may get turned into a struct in the future 
   frame_count = 0;
@@ -186,15 +186,15 @@ void play_state()
     spr_id = oam_spr(player.px, player.py, player.playerSp, PLAYER_PALETTE,0);
   
 
-    /*
-      Draw logic 
-    */
       
     // update player from the controller
     move_player(&player);
+    // check to see if the start button has been pressed
     // figure out if we have to scroll
     // scroll if we need to
-    //map_scroll(scroll_t *scroll, player_t *player, char ncontroller)
+    /*
+      Draw logic 
+    */
     map_scroll(&scroller,&player,0);
     scroll(scroller.sx,scroller.sy);
 
