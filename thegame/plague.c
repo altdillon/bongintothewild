@@ -176,40 +176,24 @@ char iabs(char x)
 
 void move_virus(virus_t* virus, player_t* player, unsigned char nvirus)
 {
-    signed char dx, dy;
     unsigned char i;
 
     for(i = 0; i < nvirus; i++)
     {
         if(!virus[i].is_alive) continue; // if the virus is dead, just skip
 
-        // compute the deleta between the virues and the player
-        dx = virus[i].x - player->px;
-        dy = virus[i].y - player->py;
-
-        // dx = (player->px - player->map_posx) - virus[i].x;
-        // dy = (player->py - player->map_posy) - virus[i].y;
-
-        // adx = iabs(dx);
-        // ady = iabs(dy);
-
-        // if(adx == 0 && ady == 0) continue;
-
-        // denom = (adx > ady) ? adx : ady;
-
-        // // fixed-point unit vector (Q7)
-        // ux = (dx << 7) / denom;
-        // uy = (dy << 7) / denom;
-
-        // // apply speed, shift back down
-        // virus[i].subx += (ux * virus[i].speed);
-        // virus[i].suby += (uy * virus[i].speed);
-
-        // virus[i].x += virus[i].subx >> 7;
-        // virus[i].y += virus[i].suby >> 7;
-
-        // virus[i].subx &= 0x7F;
-        // virus[i].suby &= 0x7F;
+        // just to the simplist way for now
+        // ax axis...
+        if(player->px < virus[i].x)
+            virus[i].x -= virus[i].speed;
+        if(player->px > virus[i].x)
+            virus[i].x += virus[i].speed;
+        
+        // y axis
+        if(player->py < virus[i].y)
+            virus[i].y -= virus[i].speed;
+        if(player->py > virus[i].y)
+            virus[i].y += virus[i].speed;
  
     }
 }
