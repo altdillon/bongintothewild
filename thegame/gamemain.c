@@ -214,7 +214,7 @@ void play_state()
     {
       if(dist_from_player(&player,&virus_arr[i]) < VIRUS_MIN_DIST)
       {
-
+        running = 0; // for now just kill the player
       }
     }
   
