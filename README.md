@@ -9,7 +9,7 @@ Working title for our submission to the 2026 global game jam. This is a game for
 
 # The theme
 The theme for this is "masks"  We're still figuring that out.  Based on the exsperinces of the team during covid, this might mean avoiding a pluge or some sort of blight. <br>
-The virues will try and move towards the player.  The player has to avoid the virues.  Any contact with a virues will cause the player to lose helath. <br>
+The virues will try and move towards the player.  The player has to avoid the virues.  Any contact with a virues will cause the player to lose health. <br>
 
 # Downloads
 [Version of the rom as of 2/6/2026](https://github.com/altdillon/bongintothewild/raw/refs/heads/main/builds/bongintothewild_2_8_2026.nes) <br>
