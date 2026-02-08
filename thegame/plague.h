@@ -36,6 +36,6 @@ unsigned char determine_is_virues_alive(virus_t* varr,unsigned char nvirueses);
 /*
     functions to determine if the player registers a hit
 */
-unsigned char register_hit(const player_t *player,const virus_t *virues,unsigned char nviruses);
+unsigned char dist_from_player(const player_t *player,const virus_t *virus);
 
 #endif

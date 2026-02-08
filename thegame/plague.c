@@ -252,6 +252,14 @@ unsigned char determine_is_virues_alive(virus_t* varr,unsigned char nvirueses)
 
 unsigned char register_hit(const player_t *player,const virus_t *virues,unsigned char nviruses)
 {
-
-    return 0; // stub...
+    unsigned char dist;
+    unsigned char dx;
+    unsigned char dy;
+    
+    // use patherigans formula to compute the distance
+    dx = player->px - virues->x;
+    dy = player->py - virues->y; 
+    dist = sqrt(dx*dx + dy*dy); // use Pocket's cursed square root function
+ 
+    return dist;
 }
