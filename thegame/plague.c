@@ -185,16 +185,22 @@ void move_virus(virus_t* virus, player_t* player, unsigned char nvirus)
         // just to the simplist way for now
         // ax axis...
         if(player->px < virus[i].x)
+        {
             virus[i].x -= virus[i].speed;
+        }
         if(player->px > virus[i].x)
+        {
             virus[i].x += virus[i].speed;
-        
+        }
         // y axis
         if(player->py < virus[i].y)
+        {
             virus[i].y -= virus[i].speed;
+        }
         if(player->py > virus[i].y)
+        {
             virus[i].y += virus[i].speed;
- 
+        }
     }
 }
 

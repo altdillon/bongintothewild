@@ -215,6 +215,11 @@ void play_state()
     */
 
     frame_count++;
+    if(frame_count % 30 == 0)
+    {
+      // after everything is all said and done, move the virues
+      move_virus(virus_arr, &player,num_viruses);
+    }
     if(frame_count % 60 == 0) // counter for events that happen once a second
     {
       num_viruses = determine_is_virues_alive(virus_arr,num_viruses);
@@ -223,8 +228,6 @@ void play_state()
       {
         day_count++;
       }
-      // after everything is all said and done, move the virues
-      move_virus(virus_arr, &player,num_viruses);
     }
     // check if t he player is lucky every 6 seconds
     if(seconds % 6 ==0)
