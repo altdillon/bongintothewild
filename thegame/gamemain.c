@@ -179,9 +179,7 @@ void play_state()
     updbuf[0] = NT_UPD_EOF;
     // draw the player, and then use the vram buffer to draw any other enviroment related stuff onto the screen 
     spr_id = oam_spr(player.px, player.py, player.playerSp, PLAYER_PALETTE,0);
-  
-
-      
+   
     // update player from the controller
     move_player(&player);
     // check to see if the start button has been pressed
@@ -209,7 +207,17 @@ void play_state()
       Game logic
     */
 
-    frame_count++;
+    frame_count++; // as this says, update the frame count
+
+    // loop through the virues and figure out if there's a hit or not
+    for(i=0;i<num_viruses;i++)
+    {
+      if(dist_from_player(&player,&virus_arr[i]) < VIRUS_MIN_DIST)
+      {
+
+      }
+    }
+  
     if(frame_count % 30 == 0)
     {
       // after everything is all said and done, move the virues
@@ -238,7 +246,6 @@ void play_state()
     {
       ran_random_virus = 1;
    
-
       lucky_number = rndint(1,10);
       if(lucky_number >= 6)
       {

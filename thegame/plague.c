@@ -250,15 +250,15 @@ unsigned char determine_is_virues_alive(virus_t* varr,unsigned char nvirueses)
 }
 
 
-unsigned char register_hit(const player_t *player,const virus_t *virues,unsigned char nviruses)
+unsigned char dist_from_player(const player_t *player,const virus_t *virus)
 {
     unsigned char dist;
     unsigned char dx;
     unsigned char dy;
     
     // use patherigans formula to compute the distance
-    dx = player->px - virues->x;
-    dy = player->py - virues->y; 
+    dx = player->px - virus->x;
+    dy = player->py - virus->y; 
     dist = sqrt(dx*dx + dy*dy); // use Pocket's cursed square root function
  
     return dist;
