@@ -8,7 +8,8 @@ Working title for our submission to the 2026 global game jam. This is a game for
 [Age of the mask global game jam page](https://globalgamejam.org/games/2026/age-mask-6)
 
 # The theme
-The theme for this is "masks"  We're still figuring that out.  Based on the exsperinces of the team during covid, this might mean avoiding a pluge or some sort of blight.   
+The theme for this is "masks"  We're still figuring that out.  Based on the exsperinces of the team during covid, this might mean avoiding a pluge or some sort of blight. <br>
+The virues will try and move towards the player.  The player has to avoid the virues.  Any contact with a virues will cause the player to lose helath. <br>
 
 # Downloads
 [Version of the rom as of 2/6/2026](https://github.com/altdillon/bongintothewild/raw/refs/heads/main/builds/bongintothewild_2_8_2026.nes) <br>
