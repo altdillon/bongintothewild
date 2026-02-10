@@ -307,6 +307,7 @@ void you_died_screen()
   display_static_background(youdied_palette,youdied,youdied_attr,NAMETABLE_A);
 
   ppu_on_all();
+  oam_clear(); // get rid of any spries on the screen
   // zero out scrolling
   scroll(0,0);
   ppu_wait_nmi();
