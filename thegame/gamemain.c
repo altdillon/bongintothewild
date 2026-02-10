@@ -293,6 +293,8 @@ void put_str(unsigned int adr, const char *str)
 
 void you_died_screen()
 {
+  // old you died screen...
   put_str(NAMETABLE_A,"you died");
   while(1);
+
 }
