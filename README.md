@@ -22,5 +22,8 @@ The virues will try and move towards the player.  The player has to avoid the vi
 ![basic gameplay](https://raw.githubusercontent.com/altdillon/bongintothewild/refs/heads/main/images/basic_gameplay.png) <br>
 # Lessons Learned
 ## tech
+This is an interesting topic.  The NES is a now 40 year old system, but there are still some useful lessions we can learn from it.
 ## teamwork
 ## gamejam
+Where to begin.  Dispite Alex's best efforts we didn't really have a meaningful discussion about what creative direction we wanted the game to take.  This was probably a mistake. Many of the other teams <br>
+spent a significant amount of time figuring out what the creative direction for their game was going to be.  Our team was working in the limited confines of the Nes, but it would've been productive talk about that.
