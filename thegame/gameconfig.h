@@ -12,7 +12,7 @@
 #define PLAYER_PALETTE 0
 #define VIRUS_PALETTE 1
 #define PLAGUE_SPRITE_INDEX 0xB9
-#define VIRUS_MIN_DIST 10 // minium distance that's needed to register contact from a virues
+#define VIRUS_MIN_DIST 20 // minium distance that's needed to register contact from a virues
 // running numbers of viruses
 #define MAX_VIRUS 10
 #define VIRUS_MIN_DX 1
