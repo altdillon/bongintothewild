@@ -294,7 +294,19 @@ void put_str(unsigned int adr, const char *str)
 void you_died_screen()
 {
   // old you died screen...
-  put_str(NAMETABLE_A,"you died");
+  // put_str(NAMETABLE_A,"you died");
+  // while(1);
+
+  ppu_off();
+
+  // clear the name table and attributes
+  vram_adr(NAMETABLE_A);
+  vram_fill(0x00,960);
+  vram_fill(0x00,64);
+
+  display_static_background(youdied_palette,youdied,youdied_attr,NAMETABLE_A);
+
+  ppu_on_all();
   while(1);
 
 }
