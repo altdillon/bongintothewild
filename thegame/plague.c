@@ -253,13 +253,21 @@ unsigned char determine_is_virues_alive(virus_t* varr,unsigned char nvirueses)
 unsigned char dist_from_player(const player_t *player,const virus_t *virus)
 {
     unsigned char dist;
+    // values for delta  
     signed char dx;
     signed char dy;
-    
+    // unsigned values for axis
+    unsigned char ax;
+    unsigned char ay;
+
     // use patherigans formula to compute the distance
     dx = player->px - virus->x;
     dy = player->py - virus->y; 
-    dist = sqrt(dx*dx + dy*dy); // use Pocket's cursed square root function
- 
+    //dist = sqrt(dx*dx + dy*dy); // use Pocket's cursed square root function
+    ax = (dx < 0)? -dx : dx;
+    ay = (dy < 0)? -dy : dy;
+    // compute dist
+    dist = ax + ay;
+
     return dist;
 }
