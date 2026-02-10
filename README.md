@@ -20,4 +20,8 @@ The virues will try and move towards the player.  The player has to avoid the vi
 *The start screen*
 ![start menu](https://github.com/altdillon/bongintothewild/blob/main/images/startmenuscreen.png?raw=true)
 *Basic game play*
-![basic gameplay](https://raw.githubusercontent.com/altdillon/bongintothewild/refs/heads/main/images/basic_gameplay.png)
+![basic gameplay](https://raw.githubusercontent.com/altdillon/bongintothewild/refs/heads/main/images/basic_gameplay.png) <br>
+# Lessons Learned
+## tech
+## teamwork
+## gamejam
