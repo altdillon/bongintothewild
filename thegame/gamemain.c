@@ -307,6 +307,9 @@ void you_died_screen()
   display_static_background(youdied_palette,youdied,youdied_attr,NAMETABLE_A);
 
   ppu_on_all();
-  while(1);
+  // zero out scrolling
+  scroll(0,0);
+  ppu_wait_nmi();
+  while(1); // just wait for the system to be reset
 
 }
