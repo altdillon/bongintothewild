@@ -12,9 +12,8 @@ The theme for this is "masks"  We're still figuring that out.  Based on the exsp
 The virues will try and move towards the player.  The player has to avoid the virues.  Any contact with a virues will cause the player to lose health. <br>
 
 # Downloads
-[Version of the rom as of 2/6/2026](https://github.com/altdillon/bongintothewild/raw/refs/heads/main/builds/bongintothewild_2_8_2026.nes) <br>
-[Version of the rom as of 2/6/2026](https://github.com/altdillon/bongintothewild/raw/refs/heads/main/builds/bongintothewild_build_2_6_26.nes) <br>
-[Version of the rom as of 2/3/2026](https://github.com/altdillon/bongintothewild/raw/refs/heads/main/builds/bongintothewild_build_2_3_26.nes)
+[Version of the rom as of 2/9/2026](https://github.com/altdillon/bongintothewild/raw/refs/heads/main/builds/bongintothewild_2_9_2026.nes) <br>
+
 
 # Screen shots
 *The start screen*
