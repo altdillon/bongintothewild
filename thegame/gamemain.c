@@ -51,14 +51,18 @@ void main(void)
   {
     switch (gamestate)
     {
-    case GAMETIME:
-      
+    case GAMETIME:    
       play_state();
+      gamestate = YOUDIED;
       break;
   
     case TITLESCREEN:
       title_screen();
       gamestate = GAMETIME;
+      break;
+
+    case YOUDIED:
+      you_died_screen(); 
       break;
 
     default:
@@ -215,7 +219,7 @@ void play_state()
     {
       if(dist_from_player(&player,&virus_arr[i]) < VIRUS_MIN_DIST)
       {
-        //running = 0; // for now just kill the player
+        running = 0; // for now just kill the player
       }
     }
   

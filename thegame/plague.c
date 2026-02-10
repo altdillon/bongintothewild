@@ -253,8 +253,8 @@ unsigned char determine_is_virues_alive(virus_t* varr,unsigned char nvirueses)
 unsigned char dist_from_player(const player_t *player,const virus_t *virus)
 {
     unsigned char dist;
-    unsigned char dx;
-    unsigned char dy;
+    signed char dx;
+    signed char dy;
     
     // use patherigans formula to compute the distance
     dx = player->px - virus->x;
