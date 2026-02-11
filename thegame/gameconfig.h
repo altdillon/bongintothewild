@@ -19,6 +19,7 @@
 #define VIRUS_MAX_DX 4
 #define VIRUS_MIN_DY 1
 #define VIRUS_MAX_DY 4
+#define VIRUS_DETECT_RAD 16
 // min and max time that we can have the virues randomly stay alive for
 #define VIRUS_MIN_TIME 2
 #define VIRUS_MAX_TIME 10

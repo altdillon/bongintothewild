@@ -262,12 +262,22 @@ unsigned char dist_from_player(const player_t *player,const virus_t *virus)
 
     // use patherigans formula to compute the distance
     dx = player->px - virus->x;
-    dy = player->py - virus->y; 
-    //dist = sqrt(dx*dx + dy*dy); // use Pocket's cursed square root function
-    ax = (dx < 0)? -dx : dx;
-    ay = (dy < 0)? -dy : dy;
-    // compute dist
-    dist = ax + ay;
+    dy = player->py - virus->y;
+    if(abs(dx) >= VIRUS_DETECT_RAD && abs(dy) >= VIRUS_DETECT_RAD)
+    { 
+        //dist = sqrt(dx*dx + dy*dy); // use Pocket's cursed square root function
+        ax = (dx < 0)? -dx : dx;
+        ay = (dy < 0)? -dy : dy;
+        // compute dist
+        dist = ax + ay;
 
-    return dist;
+        return dist;
+    }
+    else // if we're close just this to do the detection
+    {
+        dist = sqrt(dx*dx + dy*dy);
+        return dist;
+    }
+
+    return 0; // this will cause a crash if the program gets to here
 }
