@@ -250,7 +250,7 @@ void play_state()
     {
       // take a random number to compute how many maks to draw.
       // do like double luck lol
-      num_masks = rndint(0,MAX_MASKS);
+      num_masks = rndint(1,MAX_MASKS);
       compute_masks(mask_array,num_masks);
     }
 

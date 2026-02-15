@@ -24,7 +24,7 @@
 #define VIRUS_MIN_TIME 2
 #define VIRUS_MAX_TIME 10
 // sprite information for the mask
-#define MAX_MASKS 10    // max number of masks that can be shown on the scren
+#define MAX_MASKS 6    // max number of masks that can be shown on the scren, for some reason if this is less than 5 the game breaks.  I don't care enough to fix that...
 #define MASK_SPRITE_INDEX 0xAF
 #define MASK_SPRITE_PALETTE 0   
 
