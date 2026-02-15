@@ -7,8 +7,8 @@ void compute_masks(mask_t *array,unsigned char nmasks)
     for(i=0;i<nmasks;i++)
     {
         // compute the random x and y values
-        array[i].x = rndint(0,127);
-        array[i].y = rndint(0,127);
+        array[i].x = rndint(1,127);
+        array[i].y = rndint(1,127);
     }
 }
 
