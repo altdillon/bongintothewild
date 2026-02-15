@@ -246,7 +246,7 @@ void play_state()
       }
     }
     // check if t he player is lucky every 6 seconds
-    if(seconds % 6 ==0)
+    if(seconds % 6 ==0 && num_masks == 0)
     {
       // take a random number to compute how many maks to draw.
       // do like double luck lol
