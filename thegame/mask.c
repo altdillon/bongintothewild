@@ -17,7 +17,7 @@ void draw_mask_sprites(mask_t *maskarray,unsigned char nmasks,unsigned char spr_
 
 }
 
-unsigned char mask_dist_from_player(const player_t *player,const mask_t *masks,unsigned char nmasks)
+unsigned char mask_dist_from_player(const player_t *player,const mask_t *masks)
 {
     unsigned char dist;
     // signed values for delta x and y

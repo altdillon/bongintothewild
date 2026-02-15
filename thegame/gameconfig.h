@@ -27,7 +27,8 @@
 // sprite information for the mask
 #define MAX_MASKS 6    // max number of masks that can be shown on the scren, for some reason if this is less than 5 the game breaks.  I don't care enough to fix that...
 #define MASK_SPRITE_INDEX 0xAF
-#define MASK_SPRITE_PALETTE 0   
+#define MASK_SPRITE_PALETTE 0 
+#define MASK_HEALTH_VALUE 3 // how many points of health each mask is worth
 
 // game related values
 #define DEFAULT_HEALTH 10

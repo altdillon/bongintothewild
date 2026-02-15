@@ -222,7 +222,9 @@ void play_state()
 
     frame_count++; // as this says, update the frame count
 
-    // loop through the virues and figure out if there's a hit or not
+    /*
+      loop through the virues and figure out if there's a hit or not
+    */
     for(i=0;i<num_viruses;i++)
     {
       if(dist_from_player(&player,&virus_arr[i]) < VIRUS_MIN_DIST)
@@ -232,7 +234,20 @@ void play_state()
         player.health -= VIRUS_DAMAGE;
       }
     }
- 
+
+    /*
+      Figure out if there's a mask with in some range of the player
+      if we hit a mask then we add some value to the health
+      if num_masks is zero, then this loop won't run 
+    */    
+    for(i=0;i<num_masks;i++)
+    {
+      if(mask_dist_from_player(&player,&mask_array[i]) < VIRUS_MIN_DIST)
+      {
+        player.health += MASK_HEALTH_VALUE;
+      }
+    }
+
     // determine if the player has enough health to keep playing
     if(player.health <= VIRUS_DAMAGE)
     {
