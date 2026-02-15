@@ -1,6 +1,5 @@
 #include "maskitem.h"
 #include "rndhelper.h"
-#include "player.h"
 
 void compute_masks(mask_t *array,unsigned char nmasks)
 {
@@ -20,6 +19,17 @@ void draw_mask_sprites(mask_t *maskarray,unsigned char nmasks,unsigned char spr_
 
 unsigned char mask_dist_from_player(const player_t *player,const mask_t *masks,unsigned char nmasks)
 {
+    unsigned char dist;
+    // signed values for delta x and y
+    signed char dx;
+    signed char dy;
+    // unsigned values for axis x and y
+    signed char ax;
+    signed char ay;
+ 
+    ax = (dx < 0)? -dx : dx;
+    ay = (dy < 0)? -dy : dy;
+    dist = ax + ay; // add the axis to do the comput
 
-    return 0;
+    return dist;
 }
