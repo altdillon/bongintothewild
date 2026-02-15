@@ -213,6 +213,7 @@ void play_state()
       for(i=0;i<num_masks;i++)
       {
         spr_id = oam_spr(mask_array[i].x-scroller.sx,mask_array[i].y-scroller.sy,MASK_SPRITE_INDEX,MASK_SPRITE_PALETTE,spr_id);
+        mask_array[i].oam_id = spr_id; // save the oam id of the mask sprite after we draw it
       }
     }
 
@@ -245,6 +246,8 @@ void play_state()
       if(mask_dist_from_player(&player,&mask_array[i]) < VIRUS_MIN_DIST)
       {
         player.health += MASK_HEALTH_VALUE;
+        // now to delete the mask
+
       }
     }
 

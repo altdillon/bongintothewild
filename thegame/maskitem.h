@@ -6,6 +6,8 @@
 // struct for mask data
 typedef struct 
 {
+
+    unsigned char oam_id; // location of the virues in oam memory
     // define the x and y position on the screen
     unsigned char x;
     unsigned char y;
