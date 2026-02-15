@@ -20,6 +20,7 @@
 #define VIRUS_MIN_DY 1
 #define VIRUS_MAX_DY 4
 #define VIRUS_DETECT_RAD 8
+#define VIRUS_DAMAGE 3 // how many points of damage contact with a virues does
 // min and max time that we can have the virues randomly stay alive for
 #define VIRUS_MIN_TIME 2
 #define VIRUS_MAX_TIME 10
@@ -29,7 +30,7 @@
 #define MASK_SPRITE_PALETTE 0   
 
 // game related values
-#define DEFAULT_HEALTH 99
+#define DEFAULT_HEALTH 10
 #define DEFAULT_IMMUNITY 20
 
 // define the map bounderies.  

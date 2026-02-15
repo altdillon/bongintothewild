@@ -227,10 +227,18 @@ void play_state()
     {
       if(dist_from_player(&player,&virus_arr[i]) < VIRUS_MIN_DIST)
       {
-        running = 0; // for now just kill the player
+        //running = 0; // for now just kill the player
+        // if contact with a virues is recorded, subtract that from the player's heath
+        player.health -= VIRUS_DAMAGE;
       }
     }
-  
+ 
+    // determine if the player has enough health to keep playing
+    if(player.health <= VIRUS_DAMAGE)
+    {
+      running = 0; // kill the game, this will go to the "you died" screen
+    }   
+
     if(frame_count % 30 == 0)
     {
       // after everything is all said and done, move the virues
