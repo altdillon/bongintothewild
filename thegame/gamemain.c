@@ -206,7 +206,15 @@ void play_state()
         spr_id = oam_spr(virus_arr[i].x-scroller.sx,virus_arr[i].y-scroller.sy,PLAGUE_SPRITE_INDEX,VIRUS_PALETTE,spr_id);
       }
     }
-    // end test code
+
+    // draw masks on the screen
+    if(num_masks > 0)
+    {
+      for(i=0;i<num_masks;i++)
+      {
+        spr_id = oam_spr(mask_array[i].x-scroller.sx,mask_array[i].y-scroller.sy,MASK_SPRITE_INDEX,MASK_SPRITE_PALETTE,spr_id);
+      }
+    }
 
     /*
       Game logic
